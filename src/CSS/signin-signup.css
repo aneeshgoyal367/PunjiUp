@@ -1,0 +1,92 @@
+body{
+    background-color: beige;
+}
+#logo{
+    text-align: center;
+}
+#main{
+    display: grid;
+    grid-template-areas: 
+    'Header Header'
+    'Left Right';
+    justify-content: space-around;
+}
+#header{
+    color:darkblue;
+    font-size: larger;
+    font-weight: bolder;
+    grid-area: Header;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: cornsilk;
+}
+.links{
+    float: right;
+    margin: 30px;
+    text-decoration: none;
+}
+#left{
+    grid-area: Left;
+    display: grid;
+    grid-template-areas: 
+    'welcome'
+    'investor'
+    'manager';
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    width: 400px;
+    align-content: space-around;
+    text-align: center;
+    background-color: cornsilk ;
+    height: 440px;
+}
+#welcome{
+    padding: 10px;
+    grid-area: welcome;
+}
+#investor{
+    padding: 10px;
+    grid-area: investor;
+}
+#manager{
+    padding: 10px;
+    grid-area: manager;
+}
+#right{
+    grid-area: Right;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    width: 680px;
+    height: 440px;
+}
+#right-image{
+    width: 100%;
+    height: 100%;
+}
+#button{
+    background-color: skyblue;
+    text-decoration: none;
+    border: 1px solid blue ;
+    border-radius: 8px;
+    padding: 10px;
+    color: darkblue;
+}
+#button:hover{
+    border-width: 2px;
+    opacity: 0.5;
+}
+#signin{
+    text-decoration: none;
+    color:darkgreen;
+}
+#signin:hover{
+    font-weight: bold;
+}
+h2{
+   color: darkblue; 
+}
+h2:hover{
+    cursor:default;
+}

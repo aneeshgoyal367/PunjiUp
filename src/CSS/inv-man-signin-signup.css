@@ -1,0 +1,86 @@
+body{
+    background-color: beige;
+}
+#main{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'left right';
+}
+#header{
+    color:darkblue;
+    font-size: larger;
+    font-weight: bolder;
+    grid-area: header;
+    margin-left: 100px;
+    margin-right: 175px;
+    background-color: cornsilk;
+}
+.links{
+    float: right;
+    margin: 30px;
+    text-decoration: none;
+}
+#left{
+    margin-left: 50px;
+    /* margin-right: 50px; */
+    margin-top: 25px;
+    grid-area: left;
+}
+#left-img{
+    height:440px;
+    width:100%;
+}
+#right{
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-top: 25px;
+    grid-area:right ;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main-form';
+    justify-content: space-around;
+    width:400px;
+    height: 440px;
+}
+#welcome{
+    grid-area: header;
+    height: 100px;
+    background-color: cornsilk;
+}
+h2{
+    color: blue;
+    padding: 20px;
+}
+h2:hover{
+    cursor: default;
+}
+#form{
+    color: blue;
+    grid-area: main-form;
+    height: 340px;
+    padding:20px;
+    background-color: cornsilk;
+    display: grid;
+    align-content: space-around;
+}
+.form-part{
+    width:307px
+}
+#button{
+    background-color: skyblue;
+    text-decoration: none;
+    border: 1px solid blue ;
+    border-radius: 8px;
+    padding: 10px;
+    color: darkblue;
+}
+#button:hover{
+    border-width: 2px;
+    opacity: 0.5;
+}
+input:focus{
+     border: solid blue;
+}
