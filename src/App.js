@@ -1,17 +1,30 @@
-import Header from './Components/Sign-up-components/Header'
-import Left from './Components/Sign-up-components/Left'
-import Right from './Components/Sign-up-components/Right'
-import './CSS/signin-signup.css'
+import Homepage from './pages/Homepage'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  
+} from "react-router-dom";
+import Aboutus from './pages/Aboutus'
+import Contactus from './pages/Contactus'
+// import Signinpage from './pages/Signinpage'
+// import Signuppage from './pages/Signuppage'
+
 //import logo from './logo.svg';
 // import './App.css';
 
 function App() {
   return (
-    <div id="main">
-      <div id="header"><Header /></div>
-      <div id="left"><Left /></div>
-      <div id="right"><Right /></div>
-    </div>
+    <Router>
+      <Switch>
+<Route path="/" exact component={Homepage}/>
+<Route path="/Aboutus" exact component={Aboutus}/>
+<Route path="/Contactus" exact component={Contactus}/>
+{/* <Route path="/Signinpage" exact component={Signinpage}/>
+<Route path="/Signuppage" exact component={Signuppage}/>  */}
+      </Switch>
+    </Router>
+
   );
 }
 

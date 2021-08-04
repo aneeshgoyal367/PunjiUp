@@ -3,41 +3,11 @@
   <head>
     <meta name="viewport" content="with=device-width, initial-
     scale=1.0">
-    <link rel="stylesheet" href="assets/css pages/fund.css">
+    <link rel="stylesheet" href="Homehead.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Mutual Fund</title>
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-          showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-          showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) { slideIndex = 1 }
-          if (n < 1) { slideIndex = slides.length }
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-          }
-          // slideIndex++;//extra
-          // if (slideIndex > slides.length) {slideIndex = 1}  //extra
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
-          setTimeout(showSlides, 1000); //time
-      }
-  </script>
+    <title>PunjiUp</title>
+   
 
   </head>
   <body>
