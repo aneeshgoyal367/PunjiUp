@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../Components/Man-Sign-in-components/Header'
-import Left from '../Components/Man-Sign-in-components/Left'
-import Right from '../Components/Man-Sign-in-components/Right'
+import Header from '../Components/Man-Sign-up-components/Header'
+import Left from '../Components/Man-Sign-up-components/Left'
+import Right from '../Components/Man-Sign-up-components/Right'
 import '../CSS/inv-man-signin-signup.css'
-function ManSignIn() {
+function ManSignUp() {
     return (
         <div id="main1">
             <div id="header1"><Header /></div>
@@ -12,4 +12,4 @@ function ManSignIn() {
         </div>
     )
 }
-export default ManSignIn
+export default ManSignUp

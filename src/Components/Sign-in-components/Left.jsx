@@ -1,28 +1,20 @@
 import React from 'react'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import InvSignIn from '../../pages/InvSignIn'
+import {Link} from 'react-router-dom'
 function Left() {
     return (
         <div>
             <div id="welcome"><h2>Welcome to PunjiUp</h2></div>
             <br /><br />
             <div id="investor">
-                <Router>
-                    <Link to="../../pages/InvSignIn" id="button">Signin as Investor</Link>
-                    <br /><br />
-                    <Link to="" id="signin">Don't have an Investor account</Link>
-                    <Switch>
-                        <Route path="../../pages/InvSignIn"><InvSignIn /></Route>
-                    </Switch>
-                </Router>
+                <Link to="/Inv-sign-in" id="button">Signin as Investor</Link>
+                <br /><br />
+                <Link to="/Inv-sign-up" id="signin">Don't have an Investor account</Link>
             </div>
             <br /><br />
             <div id="manager">
-                <Router>
-                    <Link to="" id="button">Signin as Fund Manager</Link>
-                    <br /><br />
-                    <Link to="manager-sign-up.html" id="signin">Don't have a fund Manager account</Link>
-                </Router>
+                <Link to="/Man-sign-in" id="button">Signin as Fund Manager</Link>
+                <br /><br />
+                <Link to="/Man-sign-up" id="signin">Don't have a fund Manager account</Link>
             </div>
         </div>
     )

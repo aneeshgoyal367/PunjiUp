@@ -11,14 +11,9 @@ function Header() {
                 id="logo"
             />
             PunjiUp
-            <Router>
-                <Link to="/Aboutus" className="links">About Us</Link>
-                <Link to="/Contactus" className="links" >Contact Us</Link>
-                <Link to="/Home" className="links" >Home</Link>
-                {/* <Route path="/home"><Home/></Route>
-                <Route path="/aboutus"><Aboutus/></Route>
-                <Route path="/contactus"><Contactus/></Route> */}
-            </Router>
+            <Link to="/Aboutus" className="links">About Us</Link>
+            <Link to="/Contactus" className="links" >Contact Us</Link>
+            <Link to="/Home" className="links" >Home</Link>
         </div>
 
     )

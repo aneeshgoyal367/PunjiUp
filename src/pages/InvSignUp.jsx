@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../Components/Inv-Sign-in-components/Header'
-import Left from '../Components/Inv-Sign-in-components/Left'
-import Right from '../Components/Inv-Sign-in-components/Right'
+import Header from '../Components/Inv-Sign-up-components/Header'
+import Left from '../Components/Inv-Sign-up-components/Left'
+import Right from '../Components/Inv-Sign-up-components/Right'
 import '../CSS/inv-man-signin-signup.css'
-function InvSignIn() {
+function InvSignUp() {
     return (
         <div id="main1">
             <div id="header1"><Header/></div>
@@ -12,4 +12,4 @@ function InvSignIn() {
         </div>
     )
 }
-export default InvSignIn
+export default InvSignUp

@@ -1,48 +1,61 @@
 body{
     background-color:skyblue;
 }
-#main1{
+#main{
     display: grid;
     grid-template-areas: 
     'header header'
     'left right';
 }
-#header1{
+#header{
     grid-area: header;
     background-color: cornsilk;
     color:darkblue;
     font-size: larger;
     font-weight: bold;
 }
-#left1{
+#left{
     grid-area: left;
+    background-color: cornsilk;
+    display: grid;
+    grid-template-areas: 
+    'welcome'
+    'investor'
+    'manager';
+    align-content: space-around;
+    text-align: center;
     margin-right: 50px;
     margin-top: 50px;
-    height: 440px;
-    width:700px;
+    width: 400px;
 }
-#left2{
-    grid-area: left;
-    margin-top: 50px;
-    height: 440px;
-    width:700px;
+#welcome{
+    padding: 10px;
+    grid-area: welcome;
 }
-#left-img{
-    height: 440px;
-    width:700px;
+#investor{
+    padding: 10px;
+    grid-area: investor;
 }
-#right1{
+#manager{
+    padding: 10px;
+    grid-area: manager;
+}
+#right{
     grid-area: right;
-    background-color: cornsilk;
     margin-top: 50px;
-    text-align: center;
-    margin-right: 100px;
 }
 h2{
     color: darkblue; 
 }
 h2:hover{
      cursor:default;
+}
+#signin{
+    text-decoration: none;
+    color:darkgreen;
+}
+#signin:hover{
+    font-weight: bold;
 }
 #button{
     background-color: skyblue;
@@ -64,14 +77,4 @@ h2:hover{
 }
 .links:hover{
     color: green;
-}
-#form{
-    color: blue;
-    grid-area: main-form;
-    width: 100%;
-    height: 100%;
-}
-#welcome{
-    grid-area: welcome;
-    height: 100px;
 }

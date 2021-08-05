@@ -1,0 +1,53 @@
+body{
+    background-color:skyblue;
+}
+#info{
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'left main main';   
+}
+#header3{
+    grid-area: header;
+    background-color: cornsilk;
+    color:darkblue;
+    font-size: larger;
+    font-weight: bold;
+}
+.links{
+    float: right;
+    margin: 30px;
+    text-decoration: none;
+}
+.links:hover{
+    color: green;
+}
+#left3{
+    grid-area: left;
+    color: darkblue;
+    padding: 30px;
+    margin-top: 50px;
+    margin-right: 50px;
+    background-color: cornsilk;
+    height: 350px;
+}
+#main3{
+    grid-area: main;
+    background-color: cornsilk;
+    padding: 30px;
+    margin-top: 50px;
+}
+.left-links{
+    list-style: none;
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 30px;
+    color: darkblue;
+}
+.left-links:hover{
+    color: green;
+}
+h2{
+    padding-left: 30px;
+}
