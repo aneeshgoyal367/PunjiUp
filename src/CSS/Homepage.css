@@ -4,7 +4,10 @@ body{
 #menu li {
     display: inline;
     padding: 10px;
-    float: right;
+    float: right; 
+    margin-top: 30px;
+    
+    
     
     
 
@@ -39,11 +42,12 @@ width: 20%;
 padding: 10px;
 background: #2196F3;
 color: white;
+margin-top: 6px;
 font-size: 17px;
 border: 1px solid grey;
 border-left: none;
 cursor: pointer;
-/* background-image: url("") */
+ background-image: 'url("assets/photos/magnify.png")'
 }
 
 form.example button:hover {
@@ -85,6 +89,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 100px;
+margin-left: 350px;
 }
 
 .centerimage{
