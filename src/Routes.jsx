@@ -6,24 +6,32 @@ import Transaction from './Components/InvestorProfile/Transaction'
 import Sip from './Components/InvestorProfile/Sips'
 import Cart from './Components/InvestorProfile/Cart'
 import InvestorProfile from './pages/InvestorProfile'
+
+import TestApp from './pages/testpage';
+
 function Routes() {
     return (
+
+        
         <BrowserRouter>
             <div>
+                <Link to='/testapp'>Test App</Link>
+            </div>
+            <div>
+                <Link to='/investor'>Investor Page</Link>
+            </div>
+            <div>
                 <div>
-                    <Switch>
-                        <Route  exact path="/investor" component={InvestorProfile}>
-                        <Route path="/" component={InvestorProfile}></Route>
-                           <Route path="/investment">
-                                <Investment />
-                            </Route>
-                            <Route path='/profile' component={Profile} />
-                            <Route path='/transaction' component={Transaction} />
-                            <Route path='/sip' component={Sip} />
-                            <Route path='/cart' component={Cart} />
+                <Route exact path="/">
+                            <InvestorProfile/>
                         </Route>
-
-                    </Switch>
+                        <Route path="/investor">
+                            <InvestorProfile/>
+                        </Route>
+                
+                        <Route path="/testapp">
+                            <TestApp/>
+                        </Route>
                 </div>
 
             </div>
