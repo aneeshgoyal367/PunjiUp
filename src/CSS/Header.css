@@ -1,0 +1,26 @@
+#all-page-header{
+    background-color:cornsilk;
+    height: 100px;
+}
+.links{
+    float: right;
+    margin: 30px;
+    text-decoration: none;
+    color: darkblue;
+    font-size: medium;
+    font-weight: bold;
+}
+.links:hover{
+    color: green;
+}
+button{
+    color: darkblue;
+    font-size: medium;
+    font-weight: bold;
+}
+button:hover{
+    color: green;
+}
+#header-search{
+    height: 20px;
+}
