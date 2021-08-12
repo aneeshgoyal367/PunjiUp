@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "emailid": "rahul007@gmail.com",
+        "firstName": "Rahul",
+        "lastName": "Yadav",
+        "companyName": "SBI Funds Management Private Limited",
+        "totalFund": 100000
+    },
+    {
+        "id": 2,
+        "emailid": "sakshi007@gmail.com",
+        "firstName": "Sakshi",
+        "lastName": "Yadav",
+        "companyName": "ICICI Prudential Asset Management Company Private Limited",
+        "totalFund": 200000
+    }
+]

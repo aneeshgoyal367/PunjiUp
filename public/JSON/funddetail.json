@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "FundName": "SBI Small Cap Fund",
+        "FundAssets": "2,704 Cr",
+        "OneYearReturn": "8.33%",
+        "ThreeYearReturn": "11.28%",
+        "FiveYearReturn": "17.04%"
+    },
+    {
+        "id": 2,
+        "FundName": "Mirae Asset Emerging Bluechip Fund",
+        "FundAssets":"8,219 Cr" ,
+        "OneYearReturn":"18.27%" ,
+        "ThreeYearReturn":"14.40%" ,
+        "FiveYearReturn":"17.53%"
+    },
+    {
+        "id": 3,
+        "FundName": "Canara Robeco Emerging Equities Fund",
+        "FundAssets": "5,235 Cr",
+        "OneYearReturn":"10.38%" ,
+        "ThreeYearReturn":"11.25%" ,
+        "FiveYearReturn":"13.89%"
+    },
+    {
+        "id": 4,
+        "FundName": "Nippon India Small Cap Fund (earlier Reliance Small Cap Fund)",
+        "FundAssets":"8,425 Cr" ,
+        "OneYearReturn": "-2.60%",
+        "ThreeYearReturn":"8.14%" ,
+        "FiveYearReturn":"11.82%"
+    },
+    {
+        "id": 5,
+        "FundName": "Kotak Emerging Equity Scheme",
+        "FundAssets": "4,960 Cr",
+        "OneYearReturn": "11.35%",
+        "ThreeYearReturn":"8.38%" ,
+        "FiveYearReturn":"12.89%"
+    },
+    {
+        "id": 6,
+        "FundName": "ICICI Prudential All Seasons Bond Fund",
+        "FundAssets":"2,816 Cr" ,
+        "OneYearReturn":"11.28%" ,
+        "ThreeYearReturn": "8.24%",
+        "FiveYearReturn":"9.91%"
+    }
+]

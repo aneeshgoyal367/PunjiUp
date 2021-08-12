@@ -1,0 +1,78 @@
+body{
+    background-color: skyblue;
+}
+
+.hii{
+    margin-left: 80px;
+    margin-right: 60px ;
+}
+.pici{
+    margin-left: 680px;
+    margin-bottom: -500px;
+}
+
+#menu6 li {
+    display: inline;
+    padding: 10px;
+    float: right; 
+    margin-top: 30px;
+    
+    
+    
+    
+
+}
+.logo6{
+    position: relative;
+    margin-top:-30px;
+}
+
+form.example2 input[type=text] {
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid grey;
+    margin-top: -6px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    }
+    
+    form.example2 button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    margin-top: -6px;
+    font-size: 13px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+     background-image: 'url("assets/photos/magnify.png")'
+    }
+    
+    form.example2 button:hover {
+    background: #0b7dda;
+    }
+    
+    form.example2::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+    .checked1 {
+        color: orange;
+        padding: 5px;
+        
+        
+      }
+      .hr1 {
+        border-top: 5px solid #095484;
+        width: 5%;
+      }
+      .col{
+          color: gray;
+      }
+      
+      
