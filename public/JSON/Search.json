@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        "name":"HDFC"
+    },
+    {
+        "id":2,
+        "name":"SBI"
+    },
+    {
+        "id":3,
+        "name":"IDBI"
+    },
+    {
+        "id":4,
+        "name":"ICICI"
+    },
+    {
+        "id":5,
+        "name":"Mayank Singh"
+    },
+    {
+        "id":6,
+        "name":"Arjun Singh"
+    },
+    {
+        "id":7,
+        "name":"Rahul Singh"
+    },
+    {
+        "id":7,
+        "name":"Mahesh Singh"
+    }
+]

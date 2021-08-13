@@ -1,18 +1,10 @@
 body{
-    background-color:skyblue;
+    background-color: skyblue;
 }
 #main1{
     display: grid;
     grid-template-areas: 
-    'header header'
     'left right';
-}
-#header1{
-    grid-area: header;
-    background-color: cornsilk;
-    color:darkblue;
-    font-size: larger;
-    font-weight: bold;
 }
 #left1{
     grid-area: left;
@@ -56,15 +48,7 @@ h2:hover{
     border-width: 2px;
     opacity: 0.5;
 }
-.links{
-    float: right;
-    margin: 30px;
-    text-decoration: none;
-    color: darkblue;
-}
-.links:hover{
-    color: green;
-}
+
 #form{
     color: blue;
     grid-area: main-form;

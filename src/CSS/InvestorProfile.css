@@ -4,8 +4,9 @@ body{
 #info{
     display: grid;
     grid-template-areas: 
-    'header header header'
-    'left main main';   
+    'header'
+    'middle'
+    'main';   
 }
 #header3{
     grid-area: header;
@@ -18,24 +19,22 @@ body{
     float: right;
     margin: 30px;
     text-decoration: none;
+    color: darkblue;
 }
 .links:hover{
     color: green;
 }
-#left3{
-    grid-area: left;
+#middle3{
+    grid-area: middle;
     color: darkblue;
     padding: 30px;
     margin-top: 50px;
-    margin-right: 50px;
     background-color: cornsilk;
-    height: 350px;
 }
 #main3{
     grid-area: main;
     background-color: cornsilk;
     padding: 30px;
-    margin-top: 50px;
 }
 .left-links{
     list-style: none;

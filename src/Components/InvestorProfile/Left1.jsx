@@ -15,7 +15,6 @@ import Sip from './Sips'
 import Cart from './Cart'
 
 function Left1() {
-    let { path, url } = useRouteMatch();
     return (
         <Router>
         <div>

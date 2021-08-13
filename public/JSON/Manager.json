@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "firstname":"Mayank",
+        "lastname":"Singh",
+        "email":"mayank@gmail.com",
+        "password":"mayank@123",
+        "companyName":"ABC"
+    },
+    {
+        "id":2,
+        "firstname":"Arjun",
+        "lastname":"Singh",
+        "email":"arjun@gmail.com",
+        "password":"arjun@123",
+        "companyName":"xyz"
+    }
+]

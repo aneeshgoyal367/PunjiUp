@@ -1,0 +1,53 @@
+[
+    {
+        "cust_id":1,
+        "fund_id":1,
+        "fund_type":0,
+        "name": "HDFC",
+        "mngr_id":11,
+        "company_name":"HDFC LTD",
+        "b_start_date":"10 Aug",
+        "b_end_date":"",
+        "lockinPeriod":"",
+        "totalVal":10000,
+        "status":"pending"
+    },
+    {
+        "cust_id":1,
+        "fund_id":2,
+        "fund_type":1,
+        "name": "IDBI",
+        "mngr_id":12,
+        "company_name":"IDBI LTD",
+        "b_start_date":"10 Aug",
+        "b_end_date":"15 Aug",
+        "lockinPeriod":"5 Days",
+        "totalVal":10000,
+        "status":"Approved"
+    },
+    {
+        "cust_id":2,
+        "fund_id":3,
+        "fund_type":1,
+        "name": "ICICI",
+        "mngr_id":12,
+        "company_name":"ICICI LTD",
+        "b_start_date":"10 Aug",
+        "b_end_date":"15 Aug",
+        "lockinPeriod":"5 Days",
+        "totalVal":10000,
+        "status":"Approved"
+    },{
+        "cust_id":2,
+        "fund_id":4,
+        "fund_type":0,
+        "name": "SBI",
+        "mngr_id":11,
+        "company_name":"SBI LTD",
+        "b_start_date":"10 Aug",
+        "b_end_date":"",
+        "lockinPeriod":"",
+        "totalVal":10000,
+        "status":"pending"
+    }
+]

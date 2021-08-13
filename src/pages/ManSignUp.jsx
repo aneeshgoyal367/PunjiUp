@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Components/Man-Sign-up-components/Header'
 import Left from '../Components/Man-Sign-up-components/Left'
 import Right from '../Components/Man-Sign-up-components/Right'
-import '../CSS/inv-man-signin-signup.css'
+// import '../CSS/inv-man-signin-signup.css'
 function ManSignUp() {
     return (
         <div id="main1">
