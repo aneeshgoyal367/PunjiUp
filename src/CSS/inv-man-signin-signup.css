@@ -1,73 +1,52 @@
 body{
-    background-color: skyblue;
+
+    
+
+    background-color:skyblue;
+
 }
-#main{
+#main1{
     display: grid;
     grid-template-areas: 
     'header header'
     'left right';
 }
-#header{
+#header1{
+    grid-area: header;
+    background-color: cornsilk;
     color:darkblue;
     font-size: larger;
-    font-weight: bolder;
-    grid-area: header;
-    margin-left: 100px;
-    margin-right: 175px;
-    background-color: cornsilk;
+    font-weight: bold;
 }
-.links{
-    float: right;
-    margin: 30px;
-    text-decoration: none;
-}
-#left{
-    margin-left: 50px;
-    /* margin-right: 50px; */
-    margin-top: 25px;
+#left1{
     grid-area: left;
+    margin-right: 50px;
+    margin-top: 50px;
+    height: 440px;
+    width:700px;
+}
+#left2{
+    grid-area: left;
+    margin-top: 50px;
+    height: 440px;
+    width:700px;
 }
 #left-img{
-    height:440px;
-    width:100%;
-}
-#right{
-    margin-left: 50px;
-    margin-right: 100px;
-    margin-top: 25px;
-    grid-area:right ;
-    text-align: center;
-    display: grid;
-    grid-template-areas: 
-    'header'
-    'main-form';
-    justify-content: space-around;
-    width:400px;
     height: 440px;
+    width:700px;
 }
-#welcome{
-    grid-area: header;
-    height: 100px;
+#right1{
+    grid-area: right;
     background-color: cornsilk;
+    margin-top: 50px;
+    text-align: center;
+    margin-right: 100px;
 }
 h2{
-    color: blue;
-    padding: 20px;
+    color: darkblue; 
 }
 h2:hover{
-    cursor: default;
-}
-#form{
-    color: blue;
-    grid-area: main-form;
-    height: 340px;
-    padding:20px;
-    background-color: cornsilk;
-    display: grid;
-    align-content: space-around;
-}
-.form-part{
-    width:307px
+     cursor:default;
 }
 #button{
     background-color: skyblue;
@@ -81,6 +60,22 @@ h2:hover{
     border-width: 2px;
     opacity: 0.5;
 }
-input:focus{
-     border: solid blue;
+.links{
+    float: right;
+    margin: 30px;
+    text-decoration: none;
+    color: darkblue;
+}
+.links:hover{
+    color: green;
+}
+#form{
+    color: blue;
+    grid-area: main-form;
+    width: 100%;
+    height: 100%;
+}
+#welcome{
+    grid-area: welcome;
+    height: 100px;
 }

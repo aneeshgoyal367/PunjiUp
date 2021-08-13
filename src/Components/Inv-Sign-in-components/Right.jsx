@@ -1,7 +1,7 @@
 import {React,form} from 'react'
 function Right() {
     return (
-        <div id="right">
+        <div>
             <div id="welcome"><h2>Welcome to PunjiUp</h2></div>
             <div id="form">
                 <form>

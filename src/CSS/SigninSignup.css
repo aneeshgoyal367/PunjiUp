@@ -3,43 +3,34 @@ body{
 }
 #logo{
     text-align: center;
+    background-color:skyblue;
 }
 #main{
     display: grid;
     grid-template-areas: 
-    'Header Header'
-    'Left Right';
-    justify-content: space-around;
+    'header header'
+    'left right';
 }
 #header{
+    grid-area: header;
+    background-color: cornsilk;
     color:darkblue;
     font-size: larger;
-    font-weight: bolder;
-    grid-area: Header;
-    margin-left: 50px;
-    margin-right: 50px;
-    background-color: cornsilk;
-}
-.links{
-    float: right;
-    margin: 30px;
-    text-decoration: none;
+    font-weight: bold;
 }
 #left{
-    grid-area: Left;
+    grid-area: left;
+    background-color: cornsilk;
     display: grid;
     grid-template-areas: 
     'welcome'
     'investor'
     'manager';
-    margin-left: 50px;
+    align-content: space-around;
+    text-align: center;
     margin-right: 50px;
     margin-top: 50px;
     width: 400px;
-    align-content: space-around;
-    text-align: center;
-    background-color: cornsilk ;
-    height: 440px;
 }
 #welcome{
     padding: 10px;
@@ -54,16 +45,21 @@ body{
     grid-area: manager;
 }
 #right{
-    grid-area: Right;
-    margin-left: 50px;
-    margin-right: 50px;
+    grid-area: right;
     margin-top: 50px;
-    width: 680px;
-    height: 440px;
 }
-#right-image{
-    width: 100%;
-    height: 100%;
+h2{
+    color: darkblue; 
+}
+h2:hover{
+     cursor:default;
+}
+#signin{
+    text-decoration: none;
+    color:darkgreen;
+}
+#signin:hover{
+    font-weight: bold;
 }
 #button{
     background-color: skyblue;
@@ -77,16 +73,12 @@ body{
     border-width: 2px;
     opacity: 0.5;
 }
-#signin{
+.links{
+    float: right;
+    margin: 30px;
     text-decoration: none;
-    color:darkgreen;
+    color: darkblue;
 }
-#signin:hover{
-    font-weight: bold;
-}
-h2{
-   color: darkblue; 
-}
-h2:hover{
-    cursor:default;
+.links:hover{
+    color: green;
 }

@@ -1,15 +1,32 @@
-import {React} from 'react'
+import React, { useState, useEffect } from 'react'
+import Showfund from './Showfund'
+
+import axios from 'axios'
+const api = axios.create({
+    baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
+})
 
 function Bottom() {
-    return (
-        <div>
-        <div className="box1">
- {/* <ul id="menu5"> */}
-            <img src="assets/photos/fundpic.png" className="logo5" alt="logo" width="200" height="150" />
-           <h1 className="picc">Best Fund Managers</h1>
-           <h3 className="picc1">“When money realizes that it is in good hands, <br/>it wants to stay and multiply in those hands.”</h3>
-           </div>
-           <div className="box2">
+  const [data, setData] = useState([])
+  useEffect(() => {
+      api.get('').then(res => {
+          setData(res.data)
+      })
+  }, [])
+
+
+
+  return (
+
+      data.map((e) => {
+          return <Showfund show={e} />
+
+      })
+  )
+}
+export default Bottom
+        
+           /* <div className="box2">
             <dl className="upar">
                 <dt><h3>Sankaran Naren</h3></dt>
                 <dt><h6>ICICI Prudential Mutual Fun</h6></dt>
@@ -55,8 +72,5 @@ function Bottom() {
                 </tr>
                 </table>
          </div>
-        </div>
         
-        )
-}
-export default Bottom
+*/

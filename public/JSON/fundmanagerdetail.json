@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "ManagerName": "Sankaran Naren",
+        "FundName": "ICICI Prudential Mutual Fund",
+        "AUM": "₹1,11,005 Cr",
+        "Schemes": 38,
+        "HighestReturns": "+36.73%" 
+        
+    },
+    {
+        "id": 2,
+        "ManagerName": "Kunal Sango",
+        "FundName": "Aditya Birla Sun Life Mutual Fund",
+        "AUM": "₹9,476 Cr",
+        "Schemes": 6,
+        "HighestReturns": "+34.39%" 
+    }
+]

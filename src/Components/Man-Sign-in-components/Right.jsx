@@ -13,7 +13,7 @@ function Right() {
                         <input type="password" name="password" id="password" placeholder="Password"></input>
                     </div>
                     <br /><br />
-                    <div class="form-part">
+                    <div className="form-part">
                         <input type="submit" id="button"></input>
                     </div>
                 </form>
