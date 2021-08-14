@@ -1,4 +1,5 @@
 import {React} from 'react'
+import {Link} from 'react-router-dom'
 function Showopen(props) {
   // console.log(props)
     return (
@@ -14,7 +15,7 @@ function Showopen(props) {
 
                 </tr>
                 <tr>
-                  <td>{props.show.FundName}</td>
+                  <td><Link to="/sbifund">{props.show.FundName}</Link></td>
                   <td>{props.show.ExpenseRatio}</td>
                   <td>{props.show.FiveYearReturn}</td>
                   <td>{props.show.NetAssets}</td>

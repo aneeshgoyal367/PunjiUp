@@ -11,6 +11,7 @@ import {
 import allfund from './allfund'
 import addfund from './addfund'
 import approve from './approve'
+
 function Bottom() {
     return (
         <div>
@@ -20,6 +21,8 @@ function Bottom() {
                     <li><Link to='/allfund'>All Funds List</Link></li>
                     <br/>
                     <li><Link to='/addfund'>Add Funds</Link></li>
+                    
+
                     <br/>
                     <li><Link to='/approve'>Approve/Not Approve Funds</Link></li>
                     <br/>
@@ -32,6 +35,7 @@ function Bottom() {
                     <Switch>
                         <Route path='/allfund' component={allfund} />
                         <Route path='/addfund' component={addfund} />
+                       
                         <Route path='/approve' component={approve} />
                 {/* <h3>Please select a topic.</h3> */}
                     </Switch>
