@@ -21,7 +21,7 @@ function Middle(props) {
                 <div id="main3">
                     <Switch>
                         <Route exact path='/investor' render={() => <Investment show={props.show} />} />
-                        <Route path='/investor/investment' component={Investment} />
+                        <Route path='/investor/investment' render={() => <Investment show={props.show} />} />
                         <Route path='/investor/cart' component={Cart} />
                     </Switch>
                 </div>

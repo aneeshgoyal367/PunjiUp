@@ -8,7 +8,6 @@ function Right() {
     const [userData, setUserData] = useState([])
     useEffect(() => {
         api.get('').then(res => {
-
             setUserData(res.data)
         })
     }, [])

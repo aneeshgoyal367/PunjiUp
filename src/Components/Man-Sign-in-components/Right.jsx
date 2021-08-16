@@ -1,25 +1,36 @@
 import {useHistory} from 'react-router-dom'
 import React, { useState } from 'react'
-import UserData from '../../JSON/Manager.json'
+import axios from 'axios'
+const api = axios.create({
+    baseURL: 'http://localhost:3000/JSON/Manager.json'
+})
 function Right() {
+    const [userData, setUserData] = useState([])
+    useEffect(() => {
+        api.get('').then(res => {
+            setUserData(res.data)
+        })
+    }, [])
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
     let history = useHistory();
     const alertmsg = (e) => {
         e.preventDefault();
         let c = 0;
-        for (let i = 0; i < UserData.length; i++) {
-            if (UserData[i].email === email && UserData[i].password === password) {
-                // history.push({
-                //     pathname:'/investor',
-                // });
-                alert("login successful")
+        userData.forEach(element => {
+            if (element.email === email && element.password === password) {
+                localStorage.setItem("userEmailid", element.email)
+                history.push({
+                    pathname: '/manager',
+                    state: { id: element.cust_id, fname: element.firstName }
+                });
             }
             else {
                 c++;
             }
-        }
-        if (c === UserData.length) {
+        });
+
+        if (c === userData.length) {
             alert("Enter Valid Email and Password")
         }
     }

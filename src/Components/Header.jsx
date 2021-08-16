@@ -1,7 +1,31 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
+import Homepage from '../pages/Homepage'
+import Aboutus from '../pages/Aboutus'
+import Contactus from '../pages/Contactus'
 import '../CSS/Header.css'
 function Header(props) {
+    let history = useHistory();
+    function removeuser(){
+        localStorage.removeItem('userEmailid')
+        history.push('/InvSignin')
+    }
+    function signUpFun (){
+        history.push('/SignUpPage')
+    }
+    function signInFun (){
+        history.push('/SignInPage')
+    }
+    function about (){
+        history.push('/Aboutus')
+    }
+    function contact (){
+        history.push('/Contactus')
+    }
+    function home (){
+        history.push('/Home')
+    }
     return (
         <div id="all-page-header">
             <img
@@ -11,13 +35,13 @@ function Header(props) {
                 height="100"
                 id="logo"
             />
-            {props.signout?<button className="links">Sign out</button>:""}
-            {props.signup?<button className="links">Sign up</button>:""}
-            {props.signin?<button className="links">Sign in</button>:""}
+            {props.signout?<button className="links" onClick={removeuser}>Sign out</button>:""}
+            {props.signup?<button className="links" onClick={signUpFun} >Sign up</button>:""}
+            {props.signin?<button className="links" onClick={signInFun}>Sign in</button>:""}
             <Router>
-                {props.about?<Link to="/Aboutus" className="links">About Us</Link>:""}
-                {props.contact?<Link to="/Contactus" className="links" >Contact Us</Link>:""}
-                {props.home?<Link to="/Home" className="links" >Home</Link>:""}
+                {props.about?<button className="links" onClick={about}>About Us</button>:""}
+                {props.contact?<button className="links" onClick={contact} >Contact Us</button>:""}
+                {props.home?<button className="links" onClick={home}>Home</button>:""}
                 {/* <Switch>
                     <Route exact path="/Home" component={Homepage}></Route>
                     <Route exact path="/Aboutus" component={Aboutus}></Route>
