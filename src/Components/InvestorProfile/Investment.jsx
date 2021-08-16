@@ -1,30 +1,8 @@
 import React from 'react'
 import Show from './Show'
-function Investment (){
-    let data=[
-        {
-            name:'Kotak',
-            return:'33%',
-            minInvestment: 1000
-        },
-        {
-            name:'HDFC',
-            return:'30%',
-            minInvestment: 1200
-        },
-        {
-            name:'ICICI',
-            return:'40%',
-            minInvestment: 500
-        },
-        {
-            name:'IDBI',
-            return:'25%',
-            minInvestment: 800
-        }
-    ];
+function Investment (props){
     return(
-        data.map((e) => {
+        props.show.map((e) => {
             return <Show show={e}/>
         })
     );

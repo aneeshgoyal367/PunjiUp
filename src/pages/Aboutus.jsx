@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Bottom from '../Components/About-us-components/Bottom'
- 
-import '../CSS/Aboutus.css'
+
+ import '../CSS/Aboutus.css'
 function Aboutus() {
     return (
         <div>

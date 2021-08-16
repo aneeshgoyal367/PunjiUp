@@ -17,6 +17,10 @@ import profile from './pages/profile'
 
 //import logo from './logo.svg';
 // import './App.css';
+import React from 'react';
+
+import InvestorProfile from './pages/InvestorProfile';
+import InvSignin from './pages/InvSignIn'
 
 function App() {
   return (
@@ -38,5 +42,11 @@ function App() {
     </Router>
 
   );
+    //     <Route exact path="/InvSignin" component={InvSignin}></Route>
+    //     {/* <Route exact path="/investor" component={() => <InvestorProfile authorized={false}/>}></Route> */}
+    //     <Route exact path="/investor" component={InvestorProfile}></Route>
+    //   </Switch>
+    // </Router>
+  // )
 }
 export default App;

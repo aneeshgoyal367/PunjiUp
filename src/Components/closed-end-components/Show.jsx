@@ -6,11 +6,11 @@ function Show(props) {
 
 <table>
                 <tr>
-                  <th>Fund Name</th>
-                  <th>Fund Assets</th>
-                  <th>1-Year Return</th>
-                  <th>3-Year Return</th>
-                  <th>5-Year Return</th>
+                  <th>{props.show.first}</th>
+                  <th>{props.show.second}</th>
+                  <th>{props.show.third}</th>
+                  <th>{props.show.fourth}</th>
+                  <th>{props.show.fifth}</th>
 
                 </tr>
                 <tr>

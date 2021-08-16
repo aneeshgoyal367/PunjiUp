@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "FundName": "SBI Small Cap Fund",
+        "AddFund": "Add Fund"
+      
+    },
+    {
+        "id": 2,
+        "FundName": "Mirae Asset Emerging Bluechip Fund",
+        "Addfund":"Add Fund" 
+       
+    },
+    {
+        "id": 3,
+        "FundName": "Canara Robeco Consumer Trends Fund",
+        "Addfund":"Add Fund" 
+       
+    }
+]

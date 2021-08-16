@@ -12,7 +12,7 @@ import TestApp from './pages/testpage';
 function Routes() {
     return (
 
-        
+
         <BrowserRouter>
             <div>
                 {/* <Link to='/testapp'>Test App</Link>
@@ -22,16 +22,16 @@ function Routes() {
             </div>
             <div>
                 <div>
-                {/* <Route exact path="/">
-                            <InvestorProfile/>
-                        </Route>
-                        <Route path="/investor">
-                            <InvestorProfile/>
-                        </Route>
-                
-                        <Route path="/testapp">
-                            <TestApp/>
-                        </Route> */}
+                    <Route exact path="/">
+                        <InvestorProfile />
+                    </Route>
+                    <Route path="/investor">
+                        <InvestorProfile />
+                    </Route>
+
+                    <Route path="/testapp">
+                        <TestApp />
+                    </Route>
                 </div>
 
             </div>
