@@ -21,6 +21,7 @@ import React from 'react';
 
 import InvestorProfile from './pages/InvestorProfile';
 import InvSignin from './pages/InvSignIn'
+import FundManagerdetail from './pages/FundManagerdetail' 
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/InvSignin" exact component={InvSignin} />
         <Route path="/investor" exact component={InvestorProfile} />
         <Route path="/ManSignin" exact component={ManSignIn}/>
+        <Route path='/managerDetail' exact component={FundManagerdetail}/>
       </Switch>
     </Router>
 

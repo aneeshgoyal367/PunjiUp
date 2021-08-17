@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Header from '../Components/Header'
 import Middle from '../Components/InvestorProfile/Middle'
 import axios from 'axios'

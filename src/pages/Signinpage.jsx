@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Components/Header'
 import Left from '../Components/Sign-in-components/Left'
 import Right from '../Components/Sign-in-components/Right'
-// import '../CSS/SigninSignup.css'
+import '../CSS/SigninSignup.css'
 function Signinpage() {
     return (
         <div id="main">

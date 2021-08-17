@@ -9,15 +9,11 @@ import '../CSS/openend.css'
 function Openend() {
     return (
         <div>
-            <div id="Header"><Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={true}/></div>
-            <div id="Mid"><Mid/></div>
-            
-            <div id="Bottom"><Bottom/></div><br/>
+            <div id="Header"> <Header signup={false} signin={false} home={false} contact={false} about={false} signout={true} search={true} /></div>
+            <div id="Mid"><Mid /></div>
 
-            {/* <div><strong>Closed End funds</strong></div><br/>
-            <div id="Bottom"><CloseEndComponent/></div> */}
+            <div id="Bottom"><Bottom /></div>
 
-            
         </div>
     )
 }
