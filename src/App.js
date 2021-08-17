@@ -1,9 +1,8 @@
 import Homepage from './pages/Homepage'
 import {
-  BrowserRouter as Router,
+  BrowserRouter as Router, Route,
   Switch,
-  Route,
-
+  useRouteMatch
 } from "react-router-dom";
 import Aboutus from './pages/Aboutus'
 import Contactus from './pages/Contactus'
@@ -21,12 +20,14 @@ import React from 'react';
 
 import InvestorProfile from './pages/InvestorProfile';
 import InvSignin from './pages/InvSignIn'
-import FundManagerdetail from './pages/FundManagerdetail' 
-
+import FundManagerdetail from './pages/FundManagerdetail'
+import SearchResult from './pages/SearchResult'
 function App() {
+  // let { path, url } = useRouteMatch();
   return (
     <Router>
       <Switch>
+
         <Route path="/" exact component={Homepage} />
         <Route path="/Home" exact component={Homepage} />
         <Route path="/Aboutus" exact component={Aboutus} />
@@ -40,8 +41,9 @@ function App() {
         <Route path="/managerprofile" exact component={managerprofile} />
         <Route path="/InvSignin" exact component={InvSignin} />
         <Route path="/investor" exact component={InvestorProfile} />
-        <Route path="/ManSignin" exact component={ManSignIn}/>
-        <Route path='/managerDetail' exact component={FundManagerdetail}/>
+        <Route path="/ManSignin" exact component={ManSignIn} />
+        <Route path='/Fundmanagerb/managerDetail' exact component={FundManagerdetail} />
+        <Route path='/searchresult' exact component={SearchResult}/>
       </Switch>
     </Router>
 

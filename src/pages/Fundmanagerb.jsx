@@ -8,7 +8,7 @@ import '../CSS/fundmanagerb.css'
 function fundmanager() {
     return (
         <div>
-            <div id="Header"><Header signup={false} signin={false} home={true} contact={false} about={false} signout={true} search={true}/></div>
+            <div id="Header"><Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={false}/></div>
             <div id="Mid"><Mid/></div>
             
             <div id="Bottom"><Bottom/></div>

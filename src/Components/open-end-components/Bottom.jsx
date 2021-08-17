@@ -16,17 +16,14 @@ function Bottom() {
     
     gridProp.data = openenddata;
 
-    console.log(gridProp);
     useEffect(() => {
         api.get('').then(res => {
-            console.log(res.data)
             openendsetData(res.data)
             gridProp.data = res.data;
         })
     }, [])
 
 
-// console.log(openenddata)
     return (
 
         // openenddata.map((e) => {

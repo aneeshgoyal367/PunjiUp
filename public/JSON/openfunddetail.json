@@ -4,43 +4,48 @@
         "FundName": "SBI Small Cap Fund",
         "ExpenseRatio": "2.29%",
         "FiveYearReturn": 17.51,
-        "NetAssets": "2,704 Cr"
-        
+        "NetAssets": "2,704 Cr",
+        "mngrId":"1"
     },
     {
         "id": 2,
         "FundName": "Mirae Asset Emerging Bluechip Fund",
         "ExpenseRatio": "1.78%",
         "FiveYearReturn": 16.8,
-        "NetAssets": "8,219 Cr"
+        "NetAssets": "8,219 Cr",
+        "mngrId":"1"
     },
     {
         "id": 3,
         "FundName": "Canara Robeco Consumer Trends Fund",
         "ExpenseRatio": "2.68%",
         "FiveYearReturn": 13.52,
-        "NetAssets": "354 Cr"
+        "NetAssets": "354 Cr",
+        "mngrId":"1"
     },
     {
         "id": 4,
         "FundName": "Aditya Birla Sun Life Banking & Financial Services Fund",
         "ExpenseRatio": "2.41%",
         "FiveYearReturn": 15.11,
-        "NetAssets": "1,806 Cr"
+        "NetAssets": "1,806 Cr",
+        "mngrId":"2"
     },
     {
         "id": 5,
         "FundName": "Motilal Oswal NASDAQ 100 Exchange Traded Fund",
         "ExpenseRatio": "0.54%",
         "FiveYearReturn": 17.35,
-        "NetAssets": "218 Cr"
+        "NetAssets": "218 Cr",
+        "mngrId":"2"
     },
     {
         "id": 6,
         "FundName": "ICICI Prudential Banking and Financial Services Fund",
         "ExpenseRatio": "2.12%",
         "FiveYearReturn": 14.65,
-        "NetAssets": "3,290 Cr"
+        "NetAssets": "3,290 Cr",
+        "mngrId":"2"
     }
     
 ]

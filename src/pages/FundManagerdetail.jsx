@@ -1,15 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom'
-export default function ManDetail(){
+import Header from '../Components/Header'
+import axios from 'axios'
+import ManagerInfo from '../Components/FundManagerDetail/ManagerInfo'
+import ManAllFund from '../Components/FundManagerDetail/ManAllFund'
+const api = axios.create({
+    baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
+})
+function ManDetail() {
+    const [managerData, setmanagerData] = useState([]);
     const location = useLocation();
+    useEffect(() => {
+        api.get('').then(res => {
+            setmanagerData(res.data)
+        })
+    }, [])
+    let myData = [];
+    myData = managerData.filter(e => e.id == location.state.id);
     return (
-        <div>
-            <h3>Name: {location.state.detail.ManagerName}</h3>
-            <h3>Company Name: {location.state.detail.FundName}</h3>
-            <h3>AUM: {location.state.detail.AUM}</h3>
-            <h3>Schemes: {location.state.detail.Schemes}</h3>
-            <h3>HighestReturns: {location.state.detail.HighestReturns}</h3>
-            <hr></hr>
-        </div>
+        <>
+            {
+                myData.length ? <>
+                    <Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={false}></Header>
+                    <ManagerInfo myData={myData} />
+                    <ManAllFund id={location.state.id} /></> : ""
+            }
+        </>
     )
 }
+export default ManDetail;

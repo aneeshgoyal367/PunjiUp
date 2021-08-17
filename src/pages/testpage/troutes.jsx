@@ -17,7 +17,6 @@ import FundDetails from './fundDetails'
 
 function TRoutes() {
     let { path, url } = useRouteMatch();
-    console.log(path);
     return (
             <div>
                 {path}

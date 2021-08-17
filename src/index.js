@@ -11,10 +11,10 @@ import reportWebVitals from './reportWebVitals';
 
 import Header from './Components/Header';
 ReactDOM.render(
-  // <React.StrictMode>
-  //  <Routes/>,
+  <React.StrictMode>
+  {/* <Routes/>, */}
    <App/> ,
-  // </React.StrictMode>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

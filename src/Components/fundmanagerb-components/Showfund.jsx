@@ -1,13 +1,23 @@
 import { React } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import FundManagerdetail from '../../pages/FundManagerdetail'
 function Showfund(props) {
+  let { path, url } = useRouteMatch();
   return (
 
     <div className="box2">
       <dl className="upar">
-        <dt><h3><Link to='./managerprofile'>{props.show.ManagerName}</Link></h3></dt>
+        <dt><h3>
+          {/* <Link to="ideas" params={{ testvalue: "hello" }}>Create Idea</Link> */}
+          <Link to={{ pathname: `${url}/managerDetail`, state: { id: props.show.id } }}>{props.show.ManagerName}</Link>
+        </h3></dt>
         <dt><h6>{props.show.FundName}</h6></dt>
       </dl>
+      {/* <Router>
+        <Switch>
+          <Route path='/investor/fundManager/managerDetail' exact component={FundManagerdetail} />
+        </Switch>
+      </Router> */}
       <table>
         <tr>
           <th>AUM</th>
