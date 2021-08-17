@@ -5,6 +5,7 @@ import axios from 'axios'
 const api = axios.create({
   baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
 })
+
 function Bottom() {
   const [data, setData] = useState([])
   useEffect(() => {
@@ -18,6 +19,7 @@ function Bottom() {
       return <Showfund show={e} />
 
     })
+
   )
 }
 export default Bottom

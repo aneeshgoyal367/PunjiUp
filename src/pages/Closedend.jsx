@@ -7,7 +7,7 @@ import '../CSS/closeend.css'
 function Closedend() {
     return (
         <div>
-            <div id="Header"><Header signup={false} signin={false} home={false} contact={false} about={false} signout={true} search={true}/></div>
+            <div id="Header"><Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={true}/></div>
             <div id="Mid"><Mid/></div>
             <div id="Bottom"><Bottom/></div>
             

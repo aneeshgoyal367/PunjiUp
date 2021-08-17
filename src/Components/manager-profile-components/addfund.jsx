@@ -94,3 +94,33 @@ function T2() {
 }
 
 export default T2;
+// import {React} from 'react'
+
+// function addfund(props) {
+ 
+//     return (
+        
+//            <div className="T1">
+//        <h3>Below is the list to add fund</h3> 
+
+// <table>
+  
+                 
+//                 <tr>
+//                  <th>Fund Name</th>
+//                  <th>Add Fund</th>
+              
+//                  </tr>
+//                  <tr>
+//                   <td>{props.show.FundName}</td>
+//                   <td><button type="button" onclick="alert('Added!')">{props.show.AddFund}</button></td>
+                 
+//                 </tr>
+               
+//                 </table>
+
+//         </div>
+        
+//         )
+//     }
+//     export default addfund

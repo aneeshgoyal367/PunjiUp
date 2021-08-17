@@ -118,3 +118,37 @@ function T3() {
 }
 
 export default T3;
+// import {React} from 'react'
+
+// function approve(props) {
+ 
+//     return (
+        
+//            <div className="T1">
+//        <h3>List of Approve & Not-Approve Funds</h3> 
+
+// <table>
+  
+                 
+//                 <tr>
+//                  <th>Fund Name</th>
+//                  <th>Investor Email Id's</th>
+//                 <th>Approve/Not-Approved Funds</th>
+              
+//                  </tr>
+//                  <tr>
+//                   <td>{props.show.FundName}</td>
+//                   <td>{props.show.InvestorMail}</td>
+//                   <td><button type="button" onclick="alert('Added!')">{props.show.ApproveFund}</button>
+//                   <button type="button" onclick="alert('Added!')">{props.show.NotApprove}</button></td>
+                  
+                 
+//                 </tr>
+               
+//                 </table>
+
+//         </div>
+        
+//         )
+//     }
+//     export default approve

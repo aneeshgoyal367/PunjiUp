@@ -13,7 +13,7 @@ import Signinpage from './pages/Signinpage'
 import Signuppage from './pages/Signuppage'
 import Fundmanagerb from './pages/Fundmanagerb'
 import sbifund from './pages/sbifund'
-import profile from './pages/profile'
+import managerprofile from './pages/managerprofile'
 
 //import logo from './logo.svg';
 // import './App.css';
@@ -35,7 +35,9 @@ function App() {
 <Route path="/Openend" exact component={Openend}/>
 <Route path="/Fundmanagerb" exact component={Fundmanagerb}/>
 <Route path="/sbifund" exact component={sbifund}/>
-<Route path="/profile" exact component={profile}/>
+<Route path="/managerprofile" exact component={managerprofile}/>
+<Route path="/InvestorProfile" exact component={InvestorProfile}/>
+<Route path="/InvSignin" exact component={InvSignin}/>
 
 
       </Switch>

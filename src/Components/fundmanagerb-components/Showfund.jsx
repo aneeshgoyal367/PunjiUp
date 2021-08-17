@@ -5,7 +5,7 @@ function Showfund(props) {
 
     <div className="box2">
       <dl className="upar">
-        <dt><h3><Link to='./profile'>{props.show.ManagerName}</Link></h3></dt>
+        <dt><h3><Link to='./managerprofile'>{props.show.ManagerName}</Link></h3></dt>
         <dt><h6>{props.show.FundName}</h6></dt>
       </dl>
       <table>
