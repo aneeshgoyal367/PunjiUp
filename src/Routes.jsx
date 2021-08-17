@@ -15,7 +15,7 @@ function Routes() {
 
         <BrowserRouter>
             <div>
-                {/* <Link to='/testapp'>Test App</Link>
+                <Link to='/testapp'>Test App</Link>
             </div>
             <div>
                 <Link to='/investor'>Investor Page</Link> */}
