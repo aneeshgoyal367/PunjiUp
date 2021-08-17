@@ -1,11 +1,16 @@
 import { React } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 function Showfund(props) {
   return (
 
     <div className="box2">
       <dl className="upar">
-        <dt><h3><Link to='./profile'>{props.show.ManagerName}</Link></h3></dt>
+        <dt><h3><Link to={{
+          pathname: "/managerDetail",
+          state: {
+            detail: props.show
+          },
+        }}>{props.show.ManagerName}</Link></h3></dt>
         <dt><h6>{props.show.FundName}</h6></dt>
       </dl>
       <table>

@@ -8,6 +8,9 @@ function Header(props) {
         localStorage.removeItem('userEmailid')
         history.push('/InvSignin')
     }
+    function searching(event) {
+        console.log(event.target.value)
+    }
     return (
         <div id="all-page-header">
             <img
@@ -30,6 +33,7 @@ function Header(props) {
                     id="header-search"
                     placeholder="Search funds"
                     name="s"
+                    onKeyUp={searching}
                 />
                 <button type="submit">Search</button>
             </form> : ""}

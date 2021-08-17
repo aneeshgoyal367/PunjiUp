@@ -4,6 +4,9 @@ import {
 } from "react-router-dom";
 import Investment from './Investment'
 import Cart from './Cart'
+import CBottom from '../closed-end-components/Bottom'
+import OBottom from '../open-end-components/Bottom'
+import FBottom from '../fundmanagerb-components/Bottom'
 function Middle(props) {
     return (
         <div>
@@ -11,10 +14,19 @@ function Middle(props) {
             <Router>
                 <ul>
                     <li>
-                        <Link to='/investor/investment' className="left-links"> All Investments</Link>
+                        <Link to='/investor/investment' className="left-links"> My Investments</Link>
                     </li>
                     <li>
-                        <Link to='/investor/cart' className="left-links">  Cart </Link>
+                        <Link to='/investor/cart' className="left-links">  My Cart </Link>
+                    </li>
+                    <li>
+                        <Link to='/investor/openEnd' className="left-links">  Invest in Open End Funds </Link>
+                    </li>
+                    <li>
+                        <Link to='/investor/closeEnd' className="left-links">  Invest in Close End Funds </Link>
+                    </li>
+                    <li>
+                        <Link to='/investor/fundManager' className="left-links">  See Fund Managers </Link>
                     </li>
                 </ul>
                 <hr></hr>
@@ -23,6 +35,9 @@ function Middle(props) {
                         <Route exact path='/investor' render={() => <Investment show={props.show} />} />
                         <Route path='/investor/investment' render={() => <Investment show={props.show} />} />
                         <Route path='/investor/cart' component={Cart} />
+                        <Route path='/investor/openEnd' component={CBottom} />
+                        <Route path='/investor/closeEnd' component={OBottom} />
+                        <Route path='/investor/fundManager' component={FBottom} />
                     </Switch>
                 </div>
             </Router>
