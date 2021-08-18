@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 7,
         "FundName": "SBI Small Cap Fund",
         "ExpenseRatio": "2.29%",
         "FiveYearReturn": 17.51,
@@ -8,7 +8,7 @@
         "mngrId":"1"
     },
     {
-        "id": 2,
+        "id": 8,
         "FundName": "Mirae Asset Emerging Bluechip Fund",
         "ExpenseRatio": "1.78%",
         "FiveYearReturn": 16.8,
@@ -16,7 +16,7 @@
         "mngrId":"1"
     },
     {
-        "id": 3,
+        "id": 9,
         "FundName": "Canara Robeco Consumer Trends Fund",
         "ExpenseRatio": "2.68%",
         "FiveYearReturn": 13.52,

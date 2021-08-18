@@ -11,7 +11,7 @@ import Openend from './pages/Openend'
 import Signinpage from './pages/Signinpage'
 import Signuppage from './pages/Signuppage'
 import Fundmanagerb from './pages/Fundmanagerb'
-import sbifund from './pages/sbifund'
+import  Funddetail from './pages/Funddetail'
 import managerprofile from './pages/managerprofile'
 import ManSignIn from './pages/ManSignIn'
 //import logo from './logo.svg';
@@ -22,6 +22,7 @@ import InvestorProfile from './pages/InvestorProfile';
 import InvSignin from './pages/InvSignIn'
 import FundManagerdetail from './pages/FundManagerdetail'
 import SearchResult from './pages/SearchResult'
+
 function App() {
   // let { path, url } = useRouteMatch();
   return (
@@ -37,7 +38,7 @@ function App() {
         <Route path="/Closedend" exact component={Closedend} />
         <Route path="/Openend" exact component={Openend} />
         <Route path="/Fundmanagerb" exact component={Fundmanagerb} />
-        <Route path="/sbifund" exact component={sbifund} />
+        <Route path="/Funddetail" exact component={Funddetail} />
         <Route path="/managerprofile" exact component={managerprofile} />
         <Route path="/InvSignin" exact component={InvSignin} />
         <Route path="/investor" exact component={InvestorProfile} />

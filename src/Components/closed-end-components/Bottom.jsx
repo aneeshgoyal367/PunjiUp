@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import Show from './Show';
 
 import GridComponent from '../../common-components/grid-component';
 
@@ -12,7 +11,7 @@ function Bottom() {
     const [respData, setData] = useState([])
     let gridProp = {
         
-        columnHeaderNames: ['ID', 'Fund Name', 'Fund Assets', '1-Year Return', '3-Year Return', '5-Year Return'],
+        columnHeaderNames: ['ID', 'Fund Name', 'Fund Assets', '1-Year Return', '3-Year Return', '5-Year Return', 'ManagerId'],
         data: respData
     
     };
@@ -26,11 +25,6 @@ function Bottom() {
 
     
     return (
-
-        // data.map((e) => {
-        //     return <Show show={e} />
-
-        // })
         (gridProp && gridProp.data) &&
         <GridComponent gridObj={gridProp} />
 

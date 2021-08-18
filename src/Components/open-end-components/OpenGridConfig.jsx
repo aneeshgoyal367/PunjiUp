@@ -5,7 +5,8 @@ export default function OpenGridConfig () {
             "Fund Name",
             "Expense Ratio",
             "5-Year Return",
-            "Net Assets"
+            "Net Assets",
+            "ManagerId"
         ],
         data: []
     }

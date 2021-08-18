@@ -1,5 +1,5 @@
 body{
-    background-color:beige;
+    background-color:skyblue;
 }
 #menu li {
     display: inline;
@@ -42,7 +42,7 @@ width: 20%;
 padding: 10px;
 background: #2196F3;
 color: white;
-margin-top: 6px;
+margin-top: -6px;
 font-size: 17px;
 border: 1px solid grey;
 border-left: none;
@@ -89,7 +89,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 100px;
-margin-left: 350px;
 }
 
 .centerimage{

@@ -20,10 +20,12 @@ function Right() {
         userData.forEach(element => {
             if (element.email === email && element.password === password) {
                 localStorage.setItem("userEmailid", element.email)
-                // history.push({
-                //     pathname: '/manager',
-                //     state: { id: element.cust_id, fname: element.firstName }
-                // });
+                //
+                history.push({
+                    pathname: '/manager',
+                    state: { id: element.cust_id, fname: element.firstName }
+                });
+                //
                 alert("login successfull")
             }
             else {

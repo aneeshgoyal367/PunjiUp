@@ -1,0 +1,49 @@
+[
+    
+    {
+        "id": 1,
+        "FundName": "SBI Small Cap Fund Direct-Growth",
+        "OneYrReturn": "11.7%",
+        "ThreeYrsCAGRReturns": "6.96%",
+        "FiveYrsCAGRReturns": "14.58%",
+        "Nav": "₹ 62.48",
+        "ExpenseRatio": "0.90",
+        "ExitLoad" :"1%",
+        "FundSize": "₹ 2188.23"
+        
+    },
+    {
+        "id": 2,
+        "FundName": "Mirae Asset Emerging Bluechip Fund",
+        "OneYrReturn": "12.7%",
+        "ThreeYrsCAGRReturns": "7.96%",
+        "FiveYrsCAGRReturns": "15.58%",
+        "Nav": "₹ 63.48",
+        "ExpenseRatio": "1.90",
+        "ExitLoad" :"2%",
+        "FundSize": "₹ 2189.23"
+      
+    },
+    {
+        "id": 7,
+        "FundName": "Canara Robeco Consumer Trends Fund",
+        "OneYrReturn": "14.7%",
+        "ThreeYrsCAGRReturns": "8.96%",
+        "FiveYrsCAGRReturns": "15.58%",
+        "Nav": "₹ 63.48",
+        "ExpenseRatio": "1.90",
+        "ExitLoad" :"2%",
+        "FundSize": "₹ 2189.23"
+    },
+    {
+        "id": 8,
+        "FundName": "Aditya Birla Sun Life Banking & Financial Services Fund",
+        "OneYrReturn": "14.7%",
+        "ThreeYrsCAGRReturns": "8.96%",
+        "FiveYrsCAGRReturns": "15.58%",
+        "Nav": "₹ 63.48",
+        "ExpenseRatio": "1.90",
+        "ExitLoad" :"2%",
+        "FundSize": "₹ 2189.23"
+    }
+]

@@ -1,17 +1,18 @@
 import { React } from 'react'
-
-function Bottom() {
+import { Link, useRouteMatch, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+function Bottom(props) {
     let mystyle = { textAlign: "left" }
+    // console.log(props.id);
     return (
         <div className="hii">
-            <img src="assets/photos/SBIMF.png" alt="image1" className="pici"></img>
-            <h1 style={mystyle}>SBI Small Cap Fund Direct-Growth</h1>
+            {/* <img src="assets/photos/SBIMF.png" alt="image1" className="pici"></img> */}
+            <h1 style={mystyle}>{props.id[0].FundName}</h1>
+            {/* <span className="fa fa-star checked1" ></span>
             <span className="fa fa-star checked1" ></span>
             <span className="fa fa-star checked1" ></span>
             <span className="fa fa-star checked1" ></span>
             <span className="fa fa-star checked1" ></span>
-            <span className="fa fa-star checked1" ></span>
-            <h7>(Rated by Value Research)</h7>
+            <h7>(Rated by Value Research)</h7> */}
             <br />
             <h6>PLAN: GROWTH | TYPE : OPEN-ENDED | OPTION: Growth</h6>
             <br />
@@ -19,22 +20,19 @@ function Bottom() {
             <br/>
             
                 <h6>1 Yr return&nbsp;&nbsp;&nbsp;&nbsp;3 Yrs CAGR returns&nbsp;&nbsp;&nbsp;&nbsp;5 Yrs CAGR returns</h6>
-                <h6 className="col">&nbsp; 11.7%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.96%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 14.58%</h6>
+                <h6 className="col">&nbsp; {props.id[0].OneYrReturn}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.id[0].ThreeYrsCAGRReturns}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {props.id[0].FiveYrsCAGRReturns}</h6>
                 <br/>
                 <h6>NAV as on 03 Aug&nbsp;&nbsp;&nbsp;&nbsp;Expense ratio&nbsp;&nbsp;&nbsp;&nbsp;Exit load</h6>
-                <h6 className="col">&nbsp;&nbsp;₹ 62.48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1%</h6>
+                <h6 className="col">&nbsp;&nbsp;{props.id[0].Nav}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.id[0].ExpenseRatio}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{props.id[0].ExitLoad}</h6>
     <br/>
     <h6>Fund Size (Cr)</h6>
-    <h6 className="col">₹ 2188.23</h6>
-    <br/>
-    <div className="hr1"></div>
-    <br/>
-    <h7>MORE ABOUT THIS FUND</h7>
-    <br/>
-    <br/>
+    <h6 className="col">{props.id[0].FundSize}</h6>
     
-    <h6>->About SBI Small Cap Fund</h6>
-    <p>SBI Small Cap Fund aims to provide investors with opportunities for long-term capital growth and liquidity of an open-ended scheme while investing predominantly in a well diversified basket of equity stocks. If you are an investor who believes in the market wisdom of high risk fetching higher returns, then SBI Small Cap Fund is one that you may consider investing in the long term.<br/>
+
+    
+    
+    {/* <h6>->About {props.id.FundName}</h6>
+    <p>{props.show.FundName} aims to provide investors with opportunities for long-term capital growth and liquidity of an open-ended scheme while investing predominantly in a well diversified basket of equity stocks. If you are an investor who believes in the market wisdom of high risk fetching higher returns, then {props.show.FundName} is one that you may consider investing in the long term.<br/>
     Benchmarked against S&P BSE Small Cap, the scheme follows a bottom-up approach to select the small cap funds and companies. Having performed remarkably well in the past years, the fund is known to ensure competitive advantage, return on investments made, growth, management, and valuation in its portfolio.</p>
     <h6>->Who Should Invest?</h6>
     <ul>
@@ -44,10 +42,10 @@ function Bottom() {
         <li>If you are one among the risk-averse investors, it is suggested that you invest in large-cap funds such as Axis Bluechip Fund or SBI Bluechip Fund that involve lesser amount of risk.</li>
     </ul>
     <h6>->Will You Pay Tax?</h6>
-    <p>If you have invested in SBI Small Cap Fund, the returns generated will be taxed at 15% if you redeem before a year (Short Term Capital Gains Tax). However, after 1 year, you will be liable to pay a 10% tax on your Long Term Capital Gains Tax on returns of more than Rs. 1 lakh in a financial year.
+    <p>If you have invested in {props.show.FundName}, the returns generated will be taxed at 15% if you redeem before a year (Short Term Capital Gains Tax). However, after 1 year, you will be liable to pay a 10% tax on your Long Term Capital Gains Tax on returns of more than Rs. 1 lakh in a financial year.
     The scheme charges an Exit Load of 1% in case the investments were made for less than a year, so if you need emergency funds you will have to bear the load.<br/>
     <strong>For an example-</strong><br/>If an investor has made a capital gain of ₹50000 on investment in an equity fund, Short Term Capital Gains Tax of 15% would be levied if s/he withdraws the amount within one year of investment, which makes the payable tax to be ₹7500.
-    Also, if an investor has made a capital gain of ₹1.5 lakh on investment in an equity fund, and withdraws the amount after 1 year of investment, Long Term Capital Gains Tax of 10% would be levied on ₹50000. ₹1 Lakh is exempted from taxation. The payable tax would be ₹5000.</p>
+    Also, if an investor has made a capital gain of ₹1.5 lakh on investment in an equity fund, and withdraws the amount after 1 year of investment, Long Term Capital Gains Tax of 10% would be levied on ₹50000. ₹1 Lakh is exempted from taxation. The payable tax would be ₹5000.</p> */}
     </div>
     )
 }
