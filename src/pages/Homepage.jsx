@@ -11,6 +11,11 @@ function Homepage() {
             <div id="Header"><Header signup={true} signin={true} home={false} contact={true} about={true} signout={false} search={true}/></div>
             <div id="MiddleImage"><MiddleImage/></div>
             <div id="Homebutton"><Homebutton /></div>
+            {/* <div className="bg-dark text-light py-3">
+                <p className="text-center">
+                    Copyright &copy; PunjiUp.com
+                </p>
+            </div> */}
         </div>
         
     )

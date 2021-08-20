@@ -22,11 +22,12 @@ function Right() {
                 localStorage.setItem("userEmailid", element.email)
                 //
                 history.push({
-                    pathname: '/manager',
-                    state: { id: element.cust_id, fname: element.firstName }
+                    // pathname: '/manager',
+                    pathname: '/managerprofile',
+                    state: { id: element.cust_id, fname: element.firstName }//changes yahan kiye hai
                 });
                 //
-                alert("login successfull")
+                // alert("login successfull")
             }
             else {
                 c++;

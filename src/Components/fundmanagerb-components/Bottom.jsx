@@ -3,7 +3,8 @@ import Showfund from './Showfund'
 
 import axios from 'axios'
 const api = axios.create({
-  baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
+  // baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
+  baseURL: 'http://localhost:8080/api/fundmanager/allfundmanager'
 })
 
 function Bottom() {

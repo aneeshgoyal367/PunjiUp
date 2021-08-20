@@ -9,9 +9,10 @@ function Showfund(props) {
       <dl className="upar">
         <dt><h3>
           {/* <Link to="ideas" params={{ testvalue: "hello" }}>Create Idea</Link> */}
-          <Link to={{ pathname: `${url}/managerDetail`, state: { id: props.show.id } }}>{props.show.ManagerName}</Link>
+          <Link to={{ pathname: `${url}/managerDetail`, state: { id: props.show.id } }}>{props.show.firstName}   {props.show.lastName}</Link>
         </h3></dt>
-        <dt><h6>{props.show.FundName}</h6></dt>
+        
+        <dt><h6>{props.show.companyName}</h6></dt>
       </dl>
       {/* <Router>
         <Switch>
@@ -20,16 +21,18 @@ function Showfund(props) {
       </Router> */}
       <table>
         <tr>
-          <th>AUM</th>
-          <th>Schemes</th>
-          <th>Highest Returns</th>
+          <th>Manager Id</th>
+          <th>Educational Qualifications</th>
+          <th>Email</th>
+          <th>Experience</th>
 
 
         </tr>
         <tr>
-          <td>{props.show.AUM}</td>
-          <td>{props.show.Schemes}</td>
-          <td>{props.show.HighestReturns}</td>
+        <td>{props.show.mgrId}</td>
+          <td>{props.show.educationQualification}</td>
+          <td>{props.show.email}</td>
+          <td>{props.show.experience}</td>
 
 
         </tr>

@@ -5,12 +5,12 @@ function HomeButton(){
     return (
         <div>
              <h1 className="hi1">Discover Mutual Funds</h1>
-    <p className="hi2">Search Mutual Funds, Fund Managers etc.</p>
+    {/* <p className="hi2">Search Mutual Funds, Fund Managers etc.</p> */}
 
-    <form className="example" action="/action_page.php" style={mystyle}>
+    {/* <form className="example" action="/action_page.php" style={mystyle}>
         <input type="text" placeholder="Search.." name="search2" />
         <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    </form> */}
     <div className="btn-group">
         <div className="center1">
 
