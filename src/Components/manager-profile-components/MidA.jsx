@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import Addjson from './addjson'
+import Mid from './Mid'
 
 import axios from 'axios'
 const api = axios.create({
-  // baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
-  baseURL: 'http://localhost:8080/api/fundmanager/addfund'
+  baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
 })
 
-function Add() {
+function Bottom() {
+
   const [data, setData] = useState([])
   useEffect(() => {
     api.get('').then(res => {
@@ -17,10 +17,10 @@ function Add() {
   return (
 
     data.map((e) => {
-      return <Addjson show={e} />
-
+        
+      return <Mid show={e} />
     })
 
   )
 }
-export default Add
+export default Bottom

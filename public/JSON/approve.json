@@ -1,40 +1,35 @@
 [
     {
         "id": 1,
-        "FundName": "SBI Small Cap Fund (Open Ended)",
-        "InvestorMail": "rahul@gmail.com",
-        "ApproveFund": "Approve",
-        "NotApprove": "Not-Approve"
+        "name": "SBI Small Cap Fund (Open Ended)",
+        "email": "rahul@gmail.com"
+       
       
     },
     {
         "id": 2,
-        "FundName": "Mirae Asset Emerging Bluechip Fund (Open Ended)",
-        "InvestorMail": "ram@gmail.com",
-        "Approvefund":"Approve",
-        "NotApprove": "Not-Approve" 
+        "name": "Mirae Asset Emerging Bluechip Fund (Closed Ended)",
+        "email": "ram@gmail.com"
+       
        
     },
     {
         "id": 3,
-        "FundName": "Canara Robeco Consumer Trends Fund (Open Ended)",
-        "InvestorMail": "ramu@gmail.com",
-        "Approvefund":"Approve",
-        "NotApprove": "Not-Approve" 
+        "name": "Canara Robeco Consumer Trends Fund (Open Ended)",
+        "email": "ramu@gmail.com"
+         
     },
     {
         "id": 4,
-        "FundName": "Aditya Birla Sun Life Banking & Financial Services Fund (Open Ended)",
-        "InvestorMail": "rohan@gmail.com",
-        "Approvefund":"Approve",
-        "NotApprove": "Not-Approve" 
+        "name": "Aditya Birla Sun Life Banking & Financial Services Fund (Open Ended)",
+        "email": "rohan@gmail.com"
+       
     },
     {
         "id": 5,
-        "FundName": "Motilal Oswal NASDAQ 100 Exchange Traded Fund (Open Ended)",
-        "InvestorMail": "sachin@gmail.com",
-        "Approvefund":"Approve",
-        "NotApprove": "Not-Approve" 
+        "name": "Motilal Oswal NASDAQ 100 Exchange Traded Fund (Open Ended)",
+        "email": "sachin@gmail.com"
+       
     }
 
 

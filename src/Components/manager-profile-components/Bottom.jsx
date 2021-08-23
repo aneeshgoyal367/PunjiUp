@@ -37,7 +37,7 @@ function Bottom() {
                     
                     
                     <br/>
-                    <li><Link to='/approve'>Approve/Not Approve Funds</Link></li>
+                    <li><Link to='/approve'>Approve/Reject Funds</Link></li>
                     
                     <br/>
                 </ul>

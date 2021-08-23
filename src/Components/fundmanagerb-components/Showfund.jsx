@@ -33,10 +33,12 @@ function Showfund(props) {
           <td>{props.show.educationQualification}</td>
           <td>{props.show.email}</td>
           <td>{props.show.experience}</td>
+          
 
 
         </tr>
       </table>
+    
 
 
     </div>
