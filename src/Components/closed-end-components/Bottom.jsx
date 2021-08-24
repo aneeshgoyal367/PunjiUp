@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from 'react'
+// import Show from './Show';
 
-import GridComponent from '../../common-components/grid-component';
+import GridComponent from '../open-end-components/Grid-Component';
 
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:3000/JSON/closefunddetail.json'
-//    baseURL: 'http://localhost:8080/api/investor/getallfunds'
+    baseURL: 'http://localhost:8080/api/home/fund/Close'
 })
 function Bottom() {
 
     const [respData, setData] = useState([])
     let gridProp = {
         
-        columnHeaderNames: ['ID', 'Fund Name', 'Fund Assets', '1-Year Return', '3-Year Return', '5-Year Return', 'ManagerId'],
+        columnHeaderNames: [
+            "Fund Name",
+            "Symbol",
+            "Total  Value",
+            "Fund Manager",
+            // "Button"
+        ],
         data: respData
     
     };
@@ -26,6 +32,11 @@ function Bottom() {
 
     
     return (
+
+        // data.map((e) => {
+        //     return <Show show={e} />
+
+        // })
         (gridProp && gridProp.data) &&
         <GridComponent gridObj={gridProp} />
 

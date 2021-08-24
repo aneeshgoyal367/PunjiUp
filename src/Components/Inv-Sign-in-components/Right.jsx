@@ -19,11 +19,11 @@ function Right() {
         e.preventDefault();
         let c = 0;
         userData.forEach(element => {
-            if (element.email === email && element.password === password) {
+            if (element.email === email && element.cusPassword === password) {
                 localStorage.setItem("userEmailid", element.email)
                 history.push({
                     pathname: '/investor',
-                    state: { id: element.cust_id, fname: element.firstName }
+                    state: { id: element.customerId,}
                 });
             }
             else {

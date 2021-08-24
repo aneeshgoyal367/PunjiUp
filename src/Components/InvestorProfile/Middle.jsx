@@ -10,7 +10,6 @@ import FBottom from '../fundmanagerb-components/Bottom'
 function Middle(props) {
     return (
         <div>
-            <h2>Hi {props.name}</h2>
             <Router>
                 <ul>
                     <li>
@@ -32,9 +31,9 @@ function Middle(props) {
                 <hr></hr>
                 <div id="main3">
                     <Switch>
-                        <Route exact path='/investor' render={() => <Investment show={props.show} />} />
-                        <Route path='/investor/investment' render={() => <Investment show={props.show} />} />
-                        <Route path='/investor/cart' component={Cart} />
+                        <Route exact path='/investor' render={() => <Investment id={props.id} />} />
+                        <Route path='/investor/investment' render={() => <Investment id={props.id} /> } />
+                        <Route path='/investor/cart' render={() => <Cart id={props.id} /> } />
                         <Route path='/investor/openEnd' component={CBottom} />
                         <Route path='/investor/closeEnd' component={OBottom} />
                         <Route path='/investor/fundManager' component={FBottom} />

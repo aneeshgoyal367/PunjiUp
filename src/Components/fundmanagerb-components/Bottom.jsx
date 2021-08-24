@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from 'react'
-import Showfund from './Showfund'
-
+import GridComponent from './Grid-component';
+import OpenGridConfig from './OpenGridConfig';
 import axios from 'axios'
+
 const api = axios.create({
-  // baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
   baseURL: 'http://localhost:8080/api/fundmanager/allfundmanager'
 })
 
 function Bottom() {
-  const [data, setData] = useState([])
+  const [managerdata, setmanagerdata] = useState([])
+  let gridProp = OpenGridConfig();
+  gridProp.data = managerdata;
   useEffect(() => {
     api.get('').then(res => {
-      setData(res.data)
+      // console.log(res.data)
+      setmanagerdata(res.data)
+      gridProp.data = res.data;
     })
   }, [])
+  
   return (
-
-    data.map((e) => {
-      return <Showfund show={e} />
-
-    })
+    (gridProp && gridProp.data.length > 0) &&
+    <GridComponent gridObj={gridProp}/>
 
   )
 }
