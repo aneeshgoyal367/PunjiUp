@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 // import Showopen from './Showopen'
 
-import GridComponent from '../../common-components/grid-component';
+import GridComponent from './Grid-Component';
 import OpenGridConfig from './OpenGridConfig';
 
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:3000/JSON/openfunddetail.json'
+    baseURL: 'http://localhost:8080/api/home/fund/Open'
 })
 function Bottom() {
 
