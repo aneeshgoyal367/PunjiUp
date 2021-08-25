@@ -2,7 +2,8 @@ import React from 'react';
 import Axios from 'axios';
 import { useState } from 'react';
 function PostForm(){
-  const url="http://localhost:8080/api/fundmanager/addfund"
+  // const url="http://localhost:8080/api/fundmanager/addfund"
+  const url = 'https://punjiup.herokuapp.com/api/fundmanager/addfund'
   const [data,setData]= useState({
     fundName:"",
     symbol:"",
@@ -54,7 +55,7 @@ console.log(newdata)
       <label>Fund Type</label><input onChange={(e)=>handle(e)} id="fundType" value={data.fundType} placeholder="Open/Close" type="text"></input>
      
       <label>Manager Id</label><input  onChange={(e)=>handle(e)} id="mgrId" value={data.mgrId} placeholder="Manager Id" type="number"></input>
-      <button>Submit</button>
+      <button onClick={}>Submit</button>
     </form>
     </div>
   );

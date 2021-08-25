@@ -4,7 +4,8 @@ import OpenGridConfig from './OpenGridConfig';
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api/fundmanager/allfundmanager'
+  // baseURL: 'http://localhost:8080/api/fundmanager/allfundmanager'
+  baseURL:'https://punjiup.herokuapp.com/api/fundmanager/allfundmanager'
 })
 
 function Bottom() {

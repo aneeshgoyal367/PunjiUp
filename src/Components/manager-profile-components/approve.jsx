@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const URL = 'http://localhost:3000/JSON/approve.json'
-
+// const URL = 'http://localhost:3000/JSON/approve.json'
+const URL = 'https://punjiup.herokuapp.com/api/fundmanager/fund/transactions'
 const Table = () => {
     const [investors, setInvestors] = useState([])
 
@@ -25,8 +25,8 @@ const Table = () => {
     }
 
     const renderHeader = () => {
-        let headerElement = ['id', 'Fund Name', 'Investor EmailId', 'operation']
-
+        // let headerElement = ['id', 'Fund Name', 'Investor EmailId', 'operation']
+        let headerElement = ['Transaction Id', 'Transaction Status']
         return headerElement.map((key, index) => {
             return <th key={index}>{key.toUpperCase()}</th>
         })
@@ -37,8 +37,8 @@ const Table = () => {
             return (
                 <tr key={id}>
                     <td>{id}</td>
-                    <td>{name}</td>
-                    <td>{email}</td>
+                    {/* <td>{name}</td>
+                    <td>{email}</td> */}
  <td className='opration'>
                         <button className='button' onClick={() => removeData(id)}>Reject</button>
                     </td>
