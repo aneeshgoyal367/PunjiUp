@@ -1,27 +1,24 @@
-[
-    {
-        "cust_id":1,
-        "email":"rahul@gmail.com",
-        "firstName":"Rahul",
-        "lastName":"Singh",
-        "password":"rahul@123",
-        "addLine1":"BHU",
-        "addLine2":"Lanka",
-        "city":"Varanasi",
-        "state":"Uttar Pradesh",
-        "pinCode":221002
-    },
-    {
-        "cust_id":2,
-        "email":"mahesh@gmail.com",
-        "firstName":"Mahesh",
-        "lastName":"Singh",
-        "password":"mahesh@123",
-        "addLine1":"MNNIT",
-        "addLine2":"Teliyarganj",
-        "city":"Prayagraj",
-        "state":"Uttar Pradesh",
-        "pinCode":211004
-    }
+[{
+    "email":"Shahzadali@gmail.com",
+    "cusPassword":"shahzad@123",
+     "firstName":"ALi",
+    "lastName":"Shahzad",
+    "address":{}
+},
+{
+    "email":"Priya@gmail.com",
+    "cusPassword":"priya@123",
+     "firstName":"Priya",
+    "lastName":"goenka",
+    "address":{}
 
-]
+
+},
+{
+    "email":"ANeesh@gmail.com",
+    "cusPassword":"aneesh@123",
+     "firstName":"ANeesh",
+    "lastName":"Goyal",
+    "address":{},
+    "customerId": 10
+}]

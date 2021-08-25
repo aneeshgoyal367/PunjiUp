@@ -3,9 +3,11 @@ export default function OpenGridConfig () {
         columnHeaderNames: [
             "Fund Name",
             "Symbol",
-            "Total  Value",
-            "Fund Manager",
-            // "Button"
+            "Total Value",
+            "Fund Type",
+            "NAV",
+            "Expense Ratio",
+            "Exit Load"
         ],
         data: []
     }
