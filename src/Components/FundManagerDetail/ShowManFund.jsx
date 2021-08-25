@@ -8,7 +8,7 @@ function ShowManFund (props){
             <p>End Date: {props.show.b_end_date}</p>
             <p>Lockin Period: {props.show.lockinPeriod}</p>
             <p>Value: {props.show.totalVal}</p>
-            {localStorage.getItem("userEmailid")? <button>Add to Cart</button> : ""}
+            {localStorage.getItem("token")? <button>Add to Cart</button> : ""}
             <hr/>
         </div>
     )

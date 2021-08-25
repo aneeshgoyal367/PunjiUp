@@ -24,11 +24,13 @@ import FundManagerdetail from './pages/FundManagerdetail'
 import SearchResult from './pages/SearchResult'
 
 function App() {
+  // const api = axios.create({
+  //   baseURL: 'https://punjiup.herokuapp.com/api'
+  // })
   // let { path, url } = useRouteMatch();
   return (
     <Router>
       <Switch>
-
         <Route path="/" exact component={Homepage} />
         <Route path="/Home" exact component={Homepage} />
         <Route path="/Aboutus" exact component={Aboutus} />
@@ -38,13 +40,15 @@ function App() {
         <Route path="/Closedend" exact component={Closedend} />
         <Route path="/Openend" exact component={Openend} />
         <Route path="/Fundmanagerb" exact component={Fundmanagerb} />
-        <Route path="/Funddetail" exact component={Funddetail} />
+        <Route path="/fund-detail" exact component={Funddetail} />
         <Route path="/managerprofile" exact component={managerprofile} />
         <Route path="/InvSignin" exact component={InvSignin} />
         <Route path="/investor" exact component={InvestorProfile} />
         <Route path="/ManSignin" exact component={ManSignIn} />
-        <Route path='/Fundmanagerb/managerDetail' exact component={FundManagerdetail} />
+        {/* <Route path='/Fundmanagerb/managerDetail' exact component={FundManagerdetail} /> */}
         <Route path='/searchresult' exact component={SearchResult}/>
+        <Route path='/fund-managers/:id' component={FundManagerdetail}></Route>
+        <Route path="/fund-detail/:fundId" component={Funddetail} ></Route>
       </Switch>
     </Router>
 
