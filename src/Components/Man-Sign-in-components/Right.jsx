@@ -25,7 +25,7 @@ function Right() {
                 history.push({
                     // pathname: '/manager',
                     pathname: '/managerprofile',
-                    state: { id: element.cust_id, fname: element.firstName }//changes yahan kiye hai
+                    state: { id: element.cust_id, fname: element.firstname }//changes yahan kiye hai
                 });
                 //
                 // alert("login successfull")

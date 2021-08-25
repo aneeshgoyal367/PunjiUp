@@ -2,48 +2,53 @@
     
     {
         "id": 1,
-        "FundName": "SBI Small Cap Fund Direct-Growth",
+        "fundName": "SBI Small Cap Fund Direct-Growth",
+        "symbol": "SBI",
         "OneYrReturn": "11.7%",
         "ThreeYrsCAGRReturns": "6.96%",
         "FiveYrsCAGRReturns": "14.58%",
-        "Nav": "₹ 62.48",
-        "ExpenseRatio": "0.90",
-        "ExitLoad" :"1%",
-        "FundSize": "₹ 2188.23"
+        "nav": "₹ 62.48",
+        "fundType": "OPEN",
+        "expenseRatio": "0.90",
+        "exitLoad" :"1%",
+        "totalValue": "₹ 2188.23"
         
     },
     {
         "id": 2,
-        "FundName": "Mirae Asset Emerging Bluechip Fund",
+        "fundName": "Mirae Asset Emerging Bluechip Fund",
         "OneYrReturn": "12.7%",
         "ThreeYrsCAGRReturns": "7.96%",
         "FiveYrsCAGRReturns": "15.58%",
-        "Nav": "₹ 63.48",
-        "ExpenseRatio": "1.90",
-        "ExitLoad" :"2%",
-        "FundSize": "₹ 2189.23"
+        "nav": "₹ 63.48",
+        "expenseRatio": "1.90",
+        "fundType": "Closed",
+        "exitLoad" :"2%",
+        "totalValue": "₹ 2189.23"
       
     },
     {
         "id": 7,
-        "FundName": "Canara Robeco Consumer Trends Fund",
+        "fundName": "Canara Robeco Consumer Trends Fund",
         "OneYrReturn": "14.7%",
         "ThreeYrsCAGRReturns": "8.96%",
         "FiveYrsCAGRReturns": "15.58%",
-        "Nav": "₹ 63.48",
-        "ExpenseRatio": "1.90",
-        "ExitLoad" :"2%",
-        "FundSize": "₹ 2189.23"
+        "nav": "₹ 63.48",
+        "expenseRatio": "1.90",
+        "fundType": "OPEN",
+        "exitLoad" :"2%",
+        "totalValue": "₹ 2189.23"
     },
     {
         "id": 8,
-        "FundName": "Aditya Birla Sun Life Banking & Financial Services Fund",
+        "fundName": "Aditya Birla Sun Life Banking & Financial Services Fund",
         "OneYrReturn": "14.7%",
         "ThreeYrsCAGRReturns": "8.96%",
         "FiveYrsCAGRReturns": "15.58%",
-        "Nav": "₹ 63.48",
-        "ExpenseRatio": "1.90",
-        "ExitLoad" :"2%",
-        "FundSize": "₹ 2189.23"
+        "nav": "₹ 63.48",
+        "expenseRatio": "1.90",
+        "fundType": "OPEN",
+        "exitLoad" :"2%",
+        "totalValue": "₹ 2189.23"
     }
 ]

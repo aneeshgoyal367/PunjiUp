@@ -2,7 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 import { useState } from 'react';
 function PostForm(){
-  const url="http://localhost:8080/api/fundmanager/addfund"
+  const url="https://punjiup.herokuapp.com/api/fundmanager/addfund"
   const [data,setData]= useState({
     fundName:"",
     symbol:"",

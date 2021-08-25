@@ -6,7 +6,8 @@ function Bottom(props) {
     return (
         <div className="hii">
             {/* <img src="assets/photos/SBIMF.png" alt="image1" className="pici"></img> */}
-            <h1 style={mystyle}>{props.id[0].FundName}</h1>
+            <h1 style={mystyle}>{props.id[0].fundName}({props.id[0].symbol})</h1>
+            
             {/* <span className="fa fa-star checked1" ></span>
             <span className="fa fa-star checked1" ></span>
             <span className="fa fa-star checked1" ></span>
@@ -14,19 +15,19 @@ function Bottom(props) {
             <span className="fa fa-star checked1" ></span>
             <h7>(Rated by Value Research)</h7> */}
             <br />
-            <h6>PLAN: GROWTH | TYPE : OPEN-ENDED | OPTION: Growth</h6>
+            <h6>PLAN: GROWTH | TYPE :{props.id[0].fundType} | OPTION: Growth</h6>
             <br />
             <div className="hr1"></div>
             <br/>
             
-                <h6>1 Yr return&nbsp;&nbsp;&nbsp;&nbsp;3 Yrs CAGR returns&nbsp;&nbsp;&nbsp;&nbsp;5 Yrs CAGR returns</h6>
+                {/* <h6>1 Yr return&nbsp;&nbsp;&nbsp;&nbsp;3 Yrs CAGR returns&nbsp;&nbsp;&nbsp;&nbsp;5 Yrs CAGR returns</h6>
                 <h6 className="col">&nbsp; {props.id[0].OneYrReturn}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.id[0].ThreeYrsCAGRReturns}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {props.id[0].FiveYrsCAGRReturns}</h6>
-                <br/>
-                <h6>NAV as on 03 Aug&nbsp;&nbsp;&nbsp;&nbsp;Expense ratio&nbsp;&nbsp;&nbsp;&nbsp;Exit load</h6>
-                <h6 className="col">&nbsp;&nbsp;{props.id[0].Nav}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.id[0].ExpenseRatio}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{props.id[0].ExitLoad}</h6>
+                <br/> */}
+                <h6>NAV as on 15 Aug&nbsp;&nbsp;&nbsp;&nbsp;Expense ratio&nbsp;&nbsp;&nbsp;&nbsp;Exit load</h6>
+                <h6 className="col">&nbsp;&nbsp;{props.id[0].nav}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.id[0].expenseRatio}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{props.id[0].exitLoad}</h6>
     <br/>
     <h6>Fund Size (Cr)</h6>
-    <h6 className="col">{props.id[0].FundSize}</h6>
+    <h6 className="col">{props.id[0].totalValue}</h6>
     
 
     

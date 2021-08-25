@@ -4,8 +4,8 @@ import GridComponent from '../../common-components/grid-component';
 
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:3000/JSON/closefunddetail.json'
-//    baseURL: 'http://localhost:8080/api/investor/getallfunds'
+    // baseURL: 'http://localhost:3000/JSON/closefunddetail.json'
+ baseURL: 'https://punjiup.herokuapp.com/api/fundmanager/funds/Close'
 })
 function Bottom() {
 
