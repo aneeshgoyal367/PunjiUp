@@ -1,30 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom'
+import React from 'react';
 import Header from '../Components/Header'
-import axios from 'axios'
-import ManagerInfo from '../Components/FundManagerDetail/ManagerInfo'
+import { useParams } from "react-router";
 import ManAllFund from '../Components/FundManagerDetail/ManAllFund'
-const api = axios.create({
-    baseURL: 'http://localhost:3000/JSON/fundmanagerdetail.json'
-})
+import { useLocation } from 'react-router-dom'
 function ManDetail() {
-    const [managerData, setmanagerData] = useState([]);
+    const { id } = useParams();
     const location = useLocation();
-    useEffect(() => {
-        api.get('').then(res => {
-            setmanagerData(res.data)
-        })
-    }, [])
-    let myData = [];
-    myData = managerData.filter(e => e.id == location.state.id);
+    let idToPass ;
+    // console.log(location);
+    if(location.state!== undefined){
+        idToPass = location.state.id;
+    }
+    else{
+        idToPass = id;
+    }
+    // console.log("id======" + idToPass);
     return (
         <>
-            {
-                myData.length ? <>
-                    <Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={false}></Header>
-                    <ManagerInfo myData={myData} />
-                    <ManAllFund id={location.state.id} /></> : ""
-            }
+            <Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={false}></Header>
+            <ManAllFund id={idToPass} />
         </>
     )
 }

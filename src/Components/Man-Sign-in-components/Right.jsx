@@ -20,7 +20,7 @@ function Right() {
         let c = 0;
         userData.forEach(element => {
             if (element.email === email && element.password === password) {
-                localStorage.setItem("userEmailid", element.email)
+                localStorage.setItem("email", element.email)
                 //
                 history.push({
                     // pathname: '/manager',

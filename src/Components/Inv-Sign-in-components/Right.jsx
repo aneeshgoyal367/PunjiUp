@@ -2,37 +2,29 @@ import { useHistory } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:3000/JSON/user.json'
+    baseURL: 'https://punjiup.herokuapp.com/api/investor'
 })
 function Right() {
-    const [userData, setUserData] = useState([])
-    useEffect(() => {
-        api.get('').then(res => {
-            setUserData(res.data)
-        })
-    }, [])
-
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
     let history = useHistory();
     const alertmsg = (e) => {
         e.preventDefault();
-        let c = 0;
-        userData.forEach(element => {
-            if (element.email === email && element.cusPassword === password) {
-                localStorage.setItem("userEmailid", element.email)
-                history.push({
-                    pathname: '/investor',
-                    state: { id: element.customerId,}
-                });
-            }
-            else {
-                c++;
-            }
-        });
-
-        if (c === userData.length) {
-            alert("Enter Valid Email and Password")
+        if (email && password) {
+            const body = JSON.stringify({
+                "email": email,
+                "password": password
+            })
+            api.post('/login', body, { "headers": { "content-type": "application/json", } }).then((res) => {
+                if(res && res.data && res.data.token ){
+                    let accessToken = res.data.token.split(" ")
+                    localStorage.setItem("token", accessToken[1])
+                    history.push({
+                        pathname: '/investor',
+                        state: { id: res.data.user.id, }
+                    });
+                }
+            }).catch(function (error) { alert(error) })
         }
     }
     return (
