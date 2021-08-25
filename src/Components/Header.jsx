@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import '../CSS/Header.css'
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:8080/api/home'
+    baseURL: 'https://punjiup.herokuapp.com/api/home'
 })
 function Header(props) {
 
@@ -17,12 +17,13 @@ function Header(props) {
     const [name, setname] = useState();
 
     function removeuser() {
-        localStorage.removeItem('userEmailid')
-        history.push('/InvSignin')
+        localStorage.removeItem('token')
+        history.push('/Home')
     }
     const searching1 = (data) => {
         setInfo(data.target.value);
     }
+    let actualdata = [];
     const searching = (event) => {
         if (info === "search_fund_manager" && event.target.value.length) {
             setshowList(true);
@@ -30,6 +31,9 @@ function Header(props) {
             api.get(`/fundManager?name=${event.target.value}`).then(res => {
                 if (res && res.data && res.data.length) {
                     setsearchData(res.data)
+                    history.push(
+
+                    )
                 } else {
                     setshowList(false);
                     setsearchData([])
@@ -47,7 +51,6 @@ function Header(props) {
                     setshowList(false);
                     setsearchData([])
                 }
-
             })
         } else {
             setname("")
@@ -57,10 +60,21 @@ function Header(props) {
     }
 
     function finalResult(event) {
-        history.push({
-            pathname: '/searchresult',
-            state: { data: name }
-        });
+
+        if (info === "search_fund_manager") {
+            actualdata = searchData.filter((e) => e.firstName == name)
+            history.push({
+                pathname: '/fund-managers/' + actualdata[0].id,
+                state: { id: actualdata[0].id }
+            });
+        }
+        if (info === "search_fund") {
+            actualdata = searchData.filter((e) => e.fundName == name)
+            history.push({
+                pathname: '/fund-detail/' + actualdata[0].fundId,
+                state: { id: actualdata[0].fundId }
+            });
+        }
     }
     return (
         <div id="all-page-header">
@@ -71,9 +85,9 @@ function Header(props) {
                 height="100"
                 id="logo"
             />
-            {props.signout ? <button className="links" onClick={removeuser}>Sign out</button> : ""}
-            {props.signup ? <Link to="/Signuppage" className="links" >Sign Up</Link> : ""}
-            {props.signin ? <Link to="/Signinpage" className="links" >Sign in</Link> : ""}
+            {props.signout || localStorage.getItem("token") ? <button className="links" onClick={removeuser}>Sign out</button> : ""}
+            {props.signup && !localStorage.getItem("token") ? <Link to="/Signuppage" className="links" >Sign Up</Link> : ""}
+            {props.signin && !localStorage.getItem("token") ? <Link to="/Signinpage" className="links" >Sign in</Link> : ""}
             {props.about ? <Link to="/Aboutus" className="links" >About Us</Link> : ""}
             {props.contact ? <Link to="/Contactus" className="links"  >Contact Us</Link> : ""}
             {props.home ? <Link to="/Home" className="links" >Home</Link> : ""}

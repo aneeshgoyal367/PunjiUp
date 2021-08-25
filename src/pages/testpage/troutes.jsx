@@ -1,11 +1,8 @@
 
 import React from "react";
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    useParams,
     useRouteMatch
   } from "react-router-dom";
 
@@ -16,7 +13,7 @@ import FundDetails from './fundDetails'
 
 
 function TRoutes() {
-    let { path, url } = useRouteMatch();
+    let { path } = useRouteMatch();
     return (
             <div>
                 {path}

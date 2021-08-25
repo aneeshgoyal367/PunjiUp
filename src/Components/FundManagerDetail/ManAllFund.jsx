@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import GridComponent from './Grid-Component';
-import OpenGridConfig from './ManagerAllFundGrid';
-function ManAllFund(props) {
-    let c=props.id;
-    c.toString();
+import GridComponent from '../open-end-components/Grid-Component';
+import OpenGridConfig from '../open-end-components/OpenGridConfig';
+function ManAllFund({id}) {
     const api = axios.create({
-        baseURL: `http://localhost:8080/api/fundmanager/${c}/funds`
+        baseURL: `http://localhost:8080/api/fundmanager/${id}/funds`
     })
     const [fundData, setfundData] = useState([]);
     let gridProp = OpenGridConfig();
@@ -17,7 +15,7 @@ function ManAllFund(props) {
             gridProp.data = res.data;
         })
     }, [])
-    console.log(50)
+    // console.log(50)
     // let allFund = fundData.filter(e => e.mngr_id == props.id); 
     // debugger;
     return (
