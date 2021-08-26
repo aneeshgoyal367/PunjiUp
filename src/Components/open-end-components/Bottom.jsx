@@ -12,7 +12,8 @@ const api = axios.create({
 function Bottom(props) {
     // const location = useLocation();
     // console.log(location.state)
-    let  url;
+    let  url='/home/fund/Open';
+    let headerObj = {"content-type": "application/json"};
 
     
     const [openenddata, openendsetData] = useState([]);
@@ -23,17 +24,23 @@ function Bottom(props) {
     gridProp.data = openenddata;
 
     useEffect(() => {
-        if (props.role === 'ROLE_INVESTOR') {
+        if (props.role === 'ROLE_FUNDMANAGAER') {
             // url='/home/fund/Close'
-            url='/home/fund/Open'
+            url='/fundmanager/funds/Open'
+            
             
         }
-        else{
-            url='/fundmanager/funds/Open'
-            console.log(props.role)
+        else if(props.role === 'ROLE_INVESTOR') {
+            // url='/home/fund/Close'
+            url='/investor/fund/Open'
+            
+            
+        }
+        if (props.role) { 
+            headerObj.Authorization = `Bearer ${localStorage.getItem("token")}`
         }
         
-        api.get(url,{ "headers": { "content-type": "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}` } }).then(res => {
+        api.get(url,{ "headers": headerObj}).then(res => {
             openendsetData(res.data)
             gridProp.data = res.data;
             

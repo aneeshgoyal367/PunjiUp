@@ -12,12 +12,25 @@ function Bottom(props) {
     // const location = useLocation();
     // console.log(location.state)
     // let url=https://punjiup.herokuapp.com/api/fundmanager/funds/Close
+    
     let  url='/home/fund/Close';
+    let headerObj = {"content-type": "application/json"};
 
-    if (props.role !== 'ROLE_INVESTOR') {
+    if (props.role === 'ROLE_FUNDMANAGAER') {
         // url='/home/fund/Close'
         url='/fundmanager/funds/Close'
         
+        
+    }
+    else if(props.role === 'ROLE_INVESTOR') {
+        // url='/home/fund/Close'
+        url='/investor/fund/Close'
+        
+        
+    }
+   
+    if (props.role) { 
+        headerObj.Authorization = `Bearer ${localStorage.getItem("token")}`
     }
   
 
@@ -35,7 +48,7 @@ function Bottom(props) {
     
     };
     useEffect(() => {
-        api.get(url,{ "headers": { "content-type": "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}` } }).then(res => {
+        api.get(url,{ "headers": headerObj}).then(res => {
             setData(res.data);
             gridProp.data = res.data;
         })
