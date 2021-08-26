@@ -14,11 +14,26 @@ function PostForm(){
     totalValue:"",
     nav:"",
     expenseRatio:"",
+    exitLoad:"",
     preference:"",
     fundType:"",
     closeEndFund:{}
     // mgrId:""
   })
+  function reset(){
+    data={
+      fundName:"",
+      symbol:"",
+      totalValue:"",
+      nav:"",
+      expenseRatio:"",
+      exitLoad:"",
+      preference:"",
+      fundType:"",
+      closeEndFund:{}
+      // mgrId:""
+    }
+  }
 
 function submit(e){
  e.preventDefault();
@@ -30,6 +45,7 @@ function submit(e){
   expenseRatio:data.expenseRatio,
   preference:data.preference,
   fundType:data.fundType,
+  exitLoad:data.exitLoad,
   closeEndFund:{}
   // mgrId:parseInt(data.mgrId)
   
@@ -37,6 +53,7 @@ function submit(e){
  api.post('/addfund', body, { "headers": headerObj })
  .then(res=>{
    console.log(res.data)
+// reset();
    alert("Fund added successfully")
    
  }).catch(function (error) { alert(error);
@@ -62,6 +79,7 @@ console.log(newdata)
       <label>Nav</label><input onChange={(e)=>handle(e)} id="nav" value={data.nav} placeholder="nav" type="text"></input>
       <label>Expense Ratio</label><input onChange={(e)=>handle(e)} id="expenseRatio" value={data.expenseRatio} placeholder="expenseRatio" type="text"></input>
       <label>Rank</label><input onChange={(e)=>handle(e)} id="preference" value={data.preference} placeholder="rank" type="text"></input>
+      <label>Exit Load</label><input onChange={(e)=>handle(e)} id="exitLoad" value={data.exitLoad} placeholder="exitLoad" type="text"></input>
       <label>Fund Type</label><input onChange={(e)=>handle(e)} id="fundType" value={data.fundType} placeholder="Open/Close" type="text"></input>
      
       {/* <label>Manager Id</label><input  onChange={(e)=>handle(e)} id="mgrId" value={data.mgrId} placeholder="Manager Id" type="number"></input> */}
