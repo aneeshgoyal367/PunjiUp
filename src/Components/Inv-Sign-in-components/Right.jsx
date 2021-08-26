@@ -19,6 +19,12 @@ function Right() {
                 if(res && res.data && res.data.token ){
                     let accessToken = res.data.token.split(" ")
                     localStorage.setItem("token", accessToken[1])
+                    let userObj = {
+                        id: res.data.user.id,
+                        name:res.data.user.firstName, 
+                        role:res.data.user.role
+                    };
+                    localStorage.setItem("userObj", userObj)
                     history.push({
                         pathname: '/investor',
                         state: { id: res.data.user.id, name:res.data.user.firstName, role:res.data.user.role }

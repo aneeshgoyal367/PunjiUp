@@ -66,6 +66,7 @@ border: 2px solid black; /* Green border */
 color: maroon; /* White text */
 padding: 10px 24px; /* Some padding */
 cursor: pointer; /* Pointer/hand icon */
+
 float: left; /* Float the buttons side by side */
 }
 
@@ -88,7 +89,7 @@ background-color: gray;
 display: flex;
 justify-content: center;
 align-items: center;
-margin-right: 645px;
+margin-left: 350px;
 height: 100px;
 }
 

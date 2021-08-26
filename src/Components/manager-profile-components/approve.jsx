@@ -21,13 +21,15 @@ function Approve() {
   }, [])
   function handleApprove(e){
     e.preventDefault();
+
     let tid = e.currentTarget.getAttribute("data-tid");
+    let atype = e.currentTarget.getAttribute("data-atype");
     let reqObj={
       "transactionId":tid,
-       "transactionStatus":"Approved"
-  }	
-    api.put('/fund/updatetransaction',{"headers" :headerObj }).then(res => {
-     alert("Approved Successfully")
+       "transactionStatus":atype
+  }
+    api.put('/fund/updatetransaction',reqObj, {"headers" :headerObj }).then(res => {
+      alert("User transaction has been " + atype);
     })
   }
   
@@ -56,13 +58,14 @@ function Approve() {
               <td>{item.customer.firstName} {item.customer.lastName}</td>
               <td>{item.customer.email}</td>
               <td>{item.fundDetails.fundName}</td>
-              <td>{item.fundDetails.fundManager.totalValue}</td>
+              <td>{item.fundDetails.totalValue}</td>
               <td>{item.transactionStatus}</td>
-              <td><a href="#" data-tid = {item.transactionId} onClick={this.handleApprove}>Approve</a></td>
+              <td><a href="#" data-tid = {item.transactionId} data-atype="Approved" onClick={handleApprove}>Approve</a> /  
+                <a href="#" data-tid = {item.transactionId} data-atype="Rejected" onClick={handleApprove}>Reject</a></td>
             </tr>)
-          }) : ""}
+          }) : "No Transaction Available"}
           
-
+          {/* onClick={this.handleApprove} */}
         </tbody>
       </table>
     </div>

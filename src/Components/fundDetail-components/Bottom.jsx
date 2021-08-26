@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import { useLocation } from "react-router-dom";
 import axios from 'axios'
 function Bottom({ data }) {
+    let history = useHistory();
+    const location = useLocation();
     const api = axios.create({
         baseURL: 'https://punjiup.herokuapp.com/api/investor'
     })
     function addToCart(e) {
+        
         e.preventDefault();
         if (!localStorage.token) {
             alert("Sign in to add to cart");
+
         }
         else {
             const body = JSON.stringify({
@@ -17,7 +23,15 @@ function Bottom({ data }) {
             })
             api.post('/cart/addItem', body, { "headers": { "content-type": "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}` } }).then((res) => {
                 if (res && res.data) {
-                    alert("Successfully Added")
+                    console.log(location.state)
+                    alert("Successfully added to the cart")
+                    // let userObj= localStorage.getItem("userObj")
+                    // console.log(userObj)
+                    // history.push({
+                    //     pathname: '/investor',
+                    //     state: { id: userObj.id, name:userObj.firstName, role:userObj.role }
+                        
+                    // });
                 }
             }).catch(function (error) { alert(error) })
         }
@@ -40,6 +54,7 @@ function Bottom({ data }) {
                 <label htmlFor="addtocart">Enter Amount </label>
                 <input type="text" id="searchbox" value={amount} onChange={(e) => setAmount(e.target.value)}></input>
                 <button type="submit">Add to Cart</button>
+              
             </form>
         </>
     )

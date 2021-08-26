@@ -2,21 +2,34 @@ import React, { useState, useEffect } from 'react'
 import CartShow from './CartShow';
 import axios from 'axios'
 function Cart({ id }) {
+    let headerObj = {"content-type": "application/json"};
+ 
+    headerObj.Authorization = `Bearer ${localStorage.getItem("token")}`
+
     const api = axios.create({
-        baseURL: `https://punjiup.herokuapp.com/api/investor/cart`
+        baseURL: `https://punjiup.herokuapp.com/api/investor`
     })
     const body = JSON.stringify({
         // "customerId":id
         "customerId": id
     })
+    function handleBuy(e){
+        api.post('/buycart',{}, {"headers" :headerObj }).then(res => {
+            alert("Your request sent successfully to corresponding fund manager")
+           })
+
+    }
+
+
     const [cartdata, setcartData] = useState([]);
     useEffect(() => {
-        api.get('', { "headers": { "content-type": "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}` } }).then(res => {
+        api.get('/cart', { "headers": { "content-type": "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}` } }).then(res => {
             let temp = [];
             temp = res.data;
             setcartData(temp)
         })
     }, [])
+
     let i = 0;
     // console.log(gridProp);
     return (
@@ -40,7 +53,9 @@ function Cart({ id }) {
                         </tr>)
                     }) : ""}
 
+
                 </tbody>
+                <button onClick={handleBuy}>Buy</button>
             </table>
         </div>
     );
