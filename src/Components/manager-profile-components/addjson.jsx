@@ -5,7 +5,9 @@ const api = axios.create({
   baseURL: 'https://punjiup.herokuapp.com/api/fundmanager'
 })
 function PostForm(){
-  const url="https://punjiup.herokuapp.com/api/fundmanager/addfund"
+  let headerObj = {"content-type": "application/json"};
+  headerObj.Authorization = `Bearer ${localStorage.getItem("token")}`
+
   const [data,setData]= useState({
     fundName:"",
     symbol:"",
@@ -14,7 +16,7 @@ function PostForm(){
     expenseRatio:"",
     preference:"",
     fundType:"",
-    // closeEndFund:"",
+    closeEndFund:{}
     // mgrId:""
   })
 
@@ -28,14 +30,18 @@ function submit(e){
   expenseRatio:data.expenseRatio,
   preference:data.preference,
   fundType:data.fundType,
-  // closeEndFund:data.closeEndFund,
+  closeEndFund:{}
   // mgrId:parseInt(data.mgrId)
   
 })
- api.post('/addfund', body, { "headers": { "content-type": "application/json", } })
+ api.post('/addfund', body, { "headers": headerObj })
  .then(res=>{
    console.log(res.data)
- })
+   alert("Fund added successfully")
+   
+ }).catch(function (error) { alert(error);
+   console.log(error) })
+ 
 }
 
 
