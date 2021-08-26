@@ -12,6 +12,8 @@ function InvestorProfile() {
   let history = useHistory();
   // const [investorData, setinvestorData] = useState([])
   const location = useLocation();
+  let userObj = JSON.parse(localStorage.userObj);
+  console.log(userObj)
 
   // useEffect(() => {
   //   if (localStorage.getItem("email") && localStorage.getItem("email") != undefined && localStorage.getItem("email") != null) {
@@ -32,7 +34,7 @@ function InvestorProfile() {
 
       {localStorage.getItem("token") ? <div>
         <Header signup={false} signin={false} home={false} contact={false} about={false} signout={true} search={true} />
-        <Middle id={location.state.id} name={location.state.name} role={location.state.role}></Middle>
+        <Middle id={userObj.id} name={userObj.name} role={userObj.role}></Middle>
       </div> : history.push('/InvSignin')}
 
     </div>

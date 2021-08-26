@@ -22,19 +22,23 @@ function Approve() {
   function handleApprove(e){
     e.preventDefault();
     let tid = e.currentTarget.getAttribute("data-tid");
+    let atype = e.currentTarget.getAttribute("data-atype");
     let reqObj={
       "transactionId":tid,
-       "transactionStatus":"Approved"
+       "transactionStatus":atype
   }	
-    api.put('/fund/updatetransaction',{"headers" :headerObj }).then(res => {
-     alert("Approved Successfully")
+    api.put('/fund/updatetransaction',reqObj, {"headers" :headerObj }).then(res => {
+     alert("User transaction has been " + atype);
     })
   }
   
+
+
   // https://punjiup.herokuapp.com/api/fundmanager/fund/updatetransaction
 
   return (
     <div>
+      {approvedata.length ? 
       <table className="table">
         <thead className="thead-dark">
           <tr>
@@ -51,20 +55,22 @@ function Approve() {
         <tbody>
           {approvedata.length ? approvedata.map((item, index) => {
             return (
-            <tr key={item.id}>
+            <tr key={item.transactionId}>
               <th scope="row">{index + 1}</th>
               <td>{item.customer.firstName} {item.customer.lastName}</td>
               <td>{item.customer.email}</td>
               <td>{item.fundDetails.fundName}</td>
               <td>{item.fundDetails.fundManager.totalValue}</td>
               <td>{item.transactionStatus}</td>
-              <td><a href="#" data-tid = {item.transactionId} onClick={this.handleApprove}>Approve</a></td>
+              <td>
+                <a href="#" data-tid = {item.transactionId} data-atype="Approved" onClick={handleApprove}>Approve</a> / 
+                <a href="#" data-tid = {item.transactionId} data-atype="Rejected" onClick={handleApprove}>Reject</a></td>
             </tr>)
-          }) : ""}
+          }) : "No Transaction available"}
           
 
         </tbody>
-      </table>
+      </table> : "No user transactions are available"}
     </div>
   )
 }
