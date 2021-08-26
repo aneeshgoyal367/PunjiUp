@@ -1,11 +1,16 @@
 import {React} from 'react'
 function Bottom() {
+  function sayHello() {
+    alert('Submitted Successfully');
+  }
     return (
         <div>
             <h3><center>Contact Us</center></h3>
+        
 
 <div className="container">
-  <form action="/action_page.php">
+  {/* <form action="/action_page.php"> */}
+  <form>
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name.." />
 
@@ -22,8 +27,8 @@ function Bottom() {
 
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style={{height:'200px'}}/>
-
-    <input type="submit" value="Submit" />
+    {/* <input type="submit" value="Submit" /> */}
+    <button onClick={sayHello}>Submit</button>
   </form>
 </div>
         </div>

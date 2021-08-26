@@ -2,7 +2,7 @@ import {React} from 'react'
 function Mid(){
     return(
         <div>
-        <h1>CLOSED END FUNDS</h1>
+        <h1 className="mid">CLOSED END FUNDS</h1>
         <p>A close-ended fund is a kind of mutual fund that pools resources from numerous investors through issuance of New Fund Offer (NFO). An investor buys units of the fund during the NFO period. The units are sold at a price based on Net Asset Value of the mutual fund that is launching the NFO.
 
             Close-ended fund raise a fixed amount of capital through NFOs. After that no fresh unit can be bought from the fund house but the issued units can be traded on listed stock exchanges.

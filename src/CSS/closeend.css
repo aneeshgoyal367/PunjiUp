@@ -2,7 +2,10 @@ body{
     background-color: skyblue;
 }
 
-
+.mid{
+  margin-left: 243px;
+  margin-right: 330px;
+}
 
 
 h1{text-align:center}

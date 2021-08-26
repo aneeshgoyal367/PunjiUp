@@ -11,7 +11,7 @@ function Signinpage() {
     }
     return (
         <div id="main">
-           <div id="Header"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={false}/></div>
+           <div id="Header" className="hi"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={true}/></div>
             <div id="left"><Left /></div>
             <div id="right"><Right /></div>
         </div>
