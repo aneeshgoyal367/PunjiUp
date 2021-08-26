@@ -4,7 +4,7 @@ import GridComponent from '../open-end-components/Grid-Component';
 import OpenGridConfig from '../open-end-components/OpenGridConfig';
 function ManAllFund({id}) {
     const api = axios.create({
-        baseURL: `http://localhost:8080/api/fundmanager/${id}/funds`
+        baseURL: `https://punjiup.herokuapp.com/api/home/fundmanager/${id}/showFunds`
     })
     const [fundData, setfundData] = useState([]);
     let gridProp = OpenGridConfig();

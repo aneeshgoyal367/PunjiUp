@@ -10,6 +10,7 @@ import FBottom from '../fundmanagerb-components/Bottom'
 function Middle(props) {
     return (
         <div>
+            <h3>Hi {props.name}</h3>
             <Router>
                 <ul>
                     <li>
