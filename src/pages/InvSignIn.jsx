@@ -4,9 +4,14 @@ import Left from '../Components/Inv-Sign-in-components/Left'
 import Right from '../Components/Inv-Sign-in-components/Right'
 import '../CSS/inv-man-signin-signup.css'
 function InvSignIn() {
+    let islogin=false;
+    if (localStorage.token) {
+        
+        islogin=true;
+    }
     return (
         <>
-            <Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={false}></Header>
+           <div id="Header"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={false}/></div>
             <div id="main1">
                 <div id="left1"><Left /></div>
                 <div id="right1"><Right /></div>

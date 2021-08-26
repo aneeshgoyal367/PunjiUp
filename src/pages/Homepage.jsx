@@ -6,9 +6,14 @@ import '../CSS/Homepage.css'
 
   
 function Homepage() {
+    let islogin=false;
+    if (localStorage.token) {
+        
+        islogin=true;
+    }
     return (
         <div>
-            <div id="Header"><Header signup={true} signin={true} home={false} contact={true} about={true} signout={false} search={true}/></div>
+            <div id="Header"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={true}/></div>
             <div id="MiddleImage"><MiddleImage/></div>
             <div id="Homebutton"><Homebutton /></div>
             {/* <div className="bg-dark text-light py-3">

@@ -15,9 +15,14 @@ function ManDetail() {
         idToPass = id;
     }
     // console.log("id======" + idToPass);
+    let islogin=false;
+    if (localStorage.token) {
+        
+        islogin=true;
+    }
     return (
         <>
-            <Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={false}></Header>
+           <div id="Header"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={true}/></div>
             <ManAllFund id={idToPass} />
         </>
     )

@@ -5,7 +5,7 @@ import Right from '../Components/Sign-up-components/Right'
 function Signuppage (){
     return(
         <div id="main">
-            <div id="header"><Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={false}/></div>
+           <div id="Header"><Header signup={false} signin={false} home={true} contact={true} about={true} signout={false} search={true}/></div>
             <div id="left"><Left /></div>
             <div id="right"><Right /></div>
         </div>

@@ -8,13 +8,13 @@ function Left() {
             <div id="investor">
                 <Link to="/Invsignin" id="button">Signin as Investor</Link>
                 <br /><br />
-                <Link to="/Invsignup" id="signin">Don't have an Investor account</Link>
+                {/* <Link to="/Invsignup" id="signin">Don't have an Investor account</Link> */}
             </div>
             <br /><br />
             <div id="manager">
                 <Link to="/Mansignin" id="button">Signin as Fund Manager</Link>
                 <br /><br />
-                <Link to="/Mansignup" id="signin">Don't have a fund Manager account</Link>
+                {/* <Link to="/Mansignup" id="signin">Don't have a fund Manager account</Link> */}
             </div>
         </div>
     )

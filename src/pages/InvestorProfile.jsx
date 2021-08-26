@@ -26,12 +26,17 @@ function InvestorProfile() {
   // let show = [];
 
   // show = investorData.filter(e => e.cust_id == location.state.id)
+  let islogin=false;
+    if (localStorage.token) {
+        
+        islogin=true;
+    }
 
   return (
     <div id="info">
 
       {localStorage.getItem("token") ? <div>
-        <Header signup={false} signin={false} home={false} contact={false} about={false} signout={true} search={true} />
+      <div id="Header"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={true}/></div>
         <Middle id={location.state.id} name={location.state.name} role={location.state.role}></Middle>
       </div> : history.push('/InvSignin')}
 

@@ -10,6 +10,11 @@ import Bottom from '../Components/manager-profile-components/Bottom'
 import '../CSS/profile.css'
 import { useHistory } from 'react-router-dom'
 function Manager() {
+    let islogin=false;
+    if (localStorage.token) {
+        
+        islogin=true;
+    }
     let history = useHistory();
     
     const location = useLocation();
@@ -17,7 +22,7 @@ function Manager() {
     return (
         <div id="info">
             {localStorage.getItem("token") ? <div>
-            <div id="Header"><Header signup={false} signin={false} home={true} contact={false} about={false} signout={true} search={true}/></div>
+            <div id="Header"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={true}/></div>
             {/* <div id="MidA"><MidA/></div> */}
            
             {/* <div id="Bottom"><Bottom/></div> */}

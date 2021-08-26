@@ -5,9 +5,14 @@ import Mid from '../Components/closed-end-components/Mid'
 
 import '../CSS/closeend.css'
 function Closedend() {
+    let islogin=false;
+    if (localStorage.token) {
+        
+        islogin=true;
+    }
     return (
         <div>
-            <div id="Header"><Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={true}/></div>
+            <div id="Header"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={true}/></div>
             <div id="Mid"><Mid/></div>
             <div id="Bottom"><Bottom/></div>
             

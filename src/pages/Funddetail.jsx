@@ -9,6 +9,7 @@ function Funddetail() {
     const {fundId} = useParams();
     const location = useLocation();
     let idToPass ;
+
     // console.log(location);
     if(location.state!== undefined){
         idToPass = location.state.id;
@@ -20,12 +21,16 @@ function Funddetail() {
     if(idToPass==undefined){
         return <></>;
     }
+    let islogin=false;
+    if (localStorage.token) {
+        
+        islogin=true;
+    }
     return (
         <div>
-            <div id="Header"><Header signup={false} signin={false} home={true} contact={false} about={false} signout={false} search={false}/></div>
+            <div id="Header"><Header signup={false} signin={!islogin} home={true} contact={true} about={true} signout={islogin} search={true}/></div>
             <div id="Detailsoffund"><Detailsoffund id={idToPass}/></div>
-            
-        </div>
+            </div>
     )
 }
 export default Funddetail
