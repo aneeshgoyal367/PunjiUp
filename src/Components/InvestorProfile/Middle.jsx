@@ -35,8 +35,10 @@ function Middle(props) {
                         <Route exact path='/investor' render={() => <Investment id={props.id} />} />
                         <Route path='/investor/investment' render={() => <Investment id={props.id} /> } />
                         <Route path='/investor/cart' render={() => <Cart id={props.id} /> } />
-                        <Route path='/investor/openEnd' component={CBottom} />
-                        <Route path='/investor/closeEnd' component={OBottom} />
+                        <Route path='/investor/closeEnd' render={() => (<CBottom role={props.role}/>)}/>
+                        <Route path='/investor/openEnd' render={() => (<OBottom role={props.role} />)}/>
+                        {/* <Route path='/investor/openEnd' component={CBottom} />
+                        <Route path='/investor/closeEnd' component={OBottom} /> */}
                         <Route path='/investor/fundManager' component={FBottom} />
                     </Switch>
                 </div>
