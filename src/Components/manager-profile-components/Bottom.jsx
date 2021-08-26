@@ -26,16 +26,16 @@ function Bottom(props) {
                 <ul className="border1">
                     {/* <li><Link to='/all'>All Funds List</Link></li> */}
                     <li>
-                        <Link to='/investor/openEnd'> Open End Funds List </Link>
+                        <Link to='/fundmanager/openEnd'> Open End Funds List </Link>
                     </li>
                     <br/>
                     <li>
-                        <Link to='/investor/closeEnd' >Close End Funds List </Link>
+                        <Link to='/fundmanager/closeEnd' >Close End Funds List </Link>
                     </li>
                     
                     <br/>
                     {/* <li><Link to='/addfund'>Add Funds</Link></li> */}
-                    <li><Link to='/addjson'>Add Funds</Link></li> 
+                    <li><Link to='/addfund'>Add Funds</Link></li> 
                     
                     
                     <br/>
@@ -52,11 +52,11 @@ function Bottom(props) {
                         {/* <Route path='/allfund' component={allfund} /> */}
                         {/* <Route path='/all' component={all} /> */}
                         {/* <Route path='/addfund' component={addfund} /> */}
-                        <Route path='/investor/closeEnd' render={() => (<CBottom role={props.role} />)}/>
-                        <Route path='/investor/openEnd' render={() => (<OBottom role={props.role} />)}/>
+                        <Route path='/fundmanager/closeEnd' render={() => (<CBottom role={props.role} />)}/>
+                        <Route path='/fundmanager/openEnd' render={() => (<OBottom role={props.role} />)}/>
                         {/* <Route path='/investor/closeEnd' component={CBottom} /> */}
                         {/* <Route path='/investor/openEnd' component={OBottom} /> */}
-                        <Route path='/addjson' component={addjson} />
+                        <Route path='/addfund' component={addjson} />
                         <Route path='/approve' component={approve} />
                        
                 {/* <h3>Please select a topic.</h3> */}
