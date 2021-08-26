@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import '../CSS/Header.css'
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:8080/api/home'
+    baseURL: 'https://punjiup.herokuapp.com/api/home'
 })
 function Header(props) {
 
@@ -14,15 +14,16 @@ function Header(props) {
     const [searchData, setsearchData] = useState([]);
     const [showList, setshowList] = useState(false);
     const [info, setInfo] = useState("search_fund_manager");
-    const [name, setname] = useState();
+    const [name, setname] = useState('');
 
     function removeuser() {
-        localStorage.removeItem('userEmailid')
-        history.push('/InvSignin')
+        localStorage.removeItem('token')
+        history.push('/Home')
     }
     const searching1 = (data) => {
         setInfo(data.target.value);
     }
+    let actualdata = [];
     const searching = (event) => {
         if (info === "search_fund_manager" && event.target.value.length) {
             setshowList(true);
@@ -47,7 +48,6 @@ function Header(props) {
                     setshowList(false);
                     setsearchData([])
                 }
-
             })
         } else {
             setname("")
@@ -57,16 +57,38 @@ function Header(props) {
     }
 
     function finalResult(event) {
-        history.push({
-            pathname: '/searchresult',
-            state: { data: name }
-        });
+        if (info === "search_fund_manager") {
+            actualdata = searchData.filter((e) => e.firstName == name)
+            if (actualdata.length) {
+                history.push({
+                    pathname: '/fund-managers/' + actualdata[0].id,
+                    state: { id: actualdata[0].id }
+                });
+            } else {
+                alert("Data not found")
+            }
+
+        }
+        else if (info === "search_fund") {
+            actualdata = searchData.filter((e) => e.fundName == name)
+            if (actualdata.length) {
+                history.push({
+                    pathname: '/fund-detail/' + actualdata[0].fundId,
+                    state: { id: actualdata[0].fundId }
+                });
+            } else {
+                alert("Data not found")
+            }
+
+        } else {
+            console.log("Data not found")
+        }
     }
     return (
         <div id="all-page-header">
             <img
                 alt=""
-                src='assets/photos/logo.png'
+                src='/assets/photos/logo.png'
                 width="250"
                 height="100"
                 id="logo"

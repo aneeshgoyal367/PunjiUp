@@ -5,8 +5,7 @@ import GridComponent from '../open-end-components/Grid-Component';
 
 import axios from 'axios'
 const api = axios.create({
-    // baseURL: 'http://localhost:3000/JSON/closefunddetail.json'
- baseURL: 'https://punjiup.herokuapp.com/api/fundmanager/funds/Close'
+    baseURL: 'https://punjiup.herokuapp.com/api/home'
 })
 function Bottom() {
 
@@ -16,7 +15,7 @@ function Bottom() {
         columnHeaderNames: [
             "Fund Name",
             "Symbol",
-            "Total  Value",
+            "Total Value",
             "Fund Manager",
             // "Button"
         ],
@@ -24,7 +23,7 @@ function Bottom() {
     
     };
     useEffect(() => {
-        api.get('').then(res => {
+        api.get('/fund/Close').then(res => {
             setData(res.data);
             gridProp.data = res.data;
         })

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { useLocation } from "react-router-dom";
 import Header from '../Components/Header'
 import Middle from '../Components/InvestorProfile/Middle'
 // import axios from 'axios'
@@ -14,7 +14,7 @@ function InvestorProfile() {
   const location = useLocation();
 
   // useEffect(() => {
-  //   if (localStorage.getItem("userEmailid") && localStorage.getItem("userEmailid") != undefined && localStorage.getItem("userEmailid") != null) {
+  //   if (localStorage.getItem("email") && localStorage.getItem("email") != undefined && localStorage.getItem("email") != null) {
   //     api.get('').then(res => {
   //       setinvestorData(res.data)
   //     })
@@ -29,8 +29,11 @@ function InvestorProfile() {
 
   return (
     <div id="info">
-      {localStorage.getItem("userEmailid") ? <div><Header signup={false} signin={false} home={false} contact={false} about={false} signout={true} search={true} />
-        <Middle id={location.state.id} ></Middle></div> : history.push('/InvSignin')}
+
+      {localStorage.getItem("token") ? <div>
+        <Header signup={false} signin={false} home={false} contact={false} about={false} signout={true} search={true} />
+        <Middle id={location.state.id} name={location.state.name}></Middle>
+      </div> : history.push('/InvSignin')}
 
     </div>
   );

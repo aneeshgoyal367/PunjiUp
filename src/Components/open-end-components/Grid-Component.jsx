@@ -1,5 +1,5 @@
 import { React } from 'react'
-import { Link,Route,Switch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 function returnTableHeaders(tHeaderConfig) {
     return tHeaderConfig.map((elem, key) => {
         return <th key={key}>{elem}</th>
@@ -11,22 +11,21 @@ function returnTableRow(trow) {
     let i = 0;
     return rowObj.map((objKey, key) => {
         i++;
-        if (objKey == "fundName") {
+        if (objKey === "fundName") {
             return (
-                <>
-                <td key={i}><Link to={`/FundDeatil/${trow[objKey]}`} >{trow[objKey]}</Link></td>
-                <Switch>
-                    <Route  path="/FundDetail/:fundId"  ></Route>
-                </Switch>
-                </>
+                <td key={i}><Link to={`/fund-detail/${trow.fundId}`} >{trow[objKey]}</Link></td>
             )
         }
-        else if (objKey == "symbol" || objKey == "totalValue") {
+        else if (objKey === "totalValue") {
             return <td key={i}>{trow[objKey]}</td>
         }
-        else if (objKey == "fundManager") {
+        else if (objKey === "fundManager") {
             return <td key={i}>{trow[objKey].firstName}</td>
         }
+        else if (objKey === "symbol" ) {
+            return <td key={i}>{trow[objKey]}</td>
+        }
+        
         // else if(objKey=="Button"){
         //     return <td key={i}>Add to cart</td>
         // }

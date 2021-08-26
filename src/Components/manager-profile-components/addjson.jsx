@@ -1,6 +1,9 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import { useState } from 'react';
+const api = axios.create({
+  baseURL: 'https://punjiup.herokuapp.com/api/fundmanager'
+})
 function PostForm(){
   const url="https://punjiup.herokuapp.com/api/fundmanager/addfund"
   const [data,setData]= useState({
@@ -11,23 +14,25 @@ function PostForm(){
     expenseRatio:"",
     preference:"",
     fundType:"",
-    closeEndFund:"",
-    mgrId:""
+    // closeEndFund:"",
+    // mgrId:""
   })
 
 function submit(e){
  e.preventDefault();
- Axios.post(url,{
-   fundName:data.fundName,
-   symbol:data.symbol,
-   totalValue:data.totalValue,
-   nav:data.nav,
-   expenseRatio:data.expenseRatio,
-   preference:data.preference,
-   fundType:data.fundType,
-   closeEndFund:data.closeEndFund,
-   mgrId:parseInt(data.mgrId)
- })
+ const body = JSON.stringify({
+  fundName:data.fundName,
+  symbol:data.symbol,
+  totalValue:data.totalValue,
+  nav:data.nav,
+  expenseRatio:data.expenseRatio,
+  preference:data.preference,
+  fundType:data.fundType,
+  // closeEndFund:data.closeEndFund,
+  // mgrId:parseInt(data.mgrId)
+  
+})
+ api.post('/addfund', body, { "headers": { "content-type": "application/json", } })
  .then(res=>{
    console.log(res.data)
  })
@@ -53,7 +58,7 @@ console.log(newdata)
       <label>Rank</label><input onChange={(e)=>handle(e)} id="preference" value={data.preference} placeholder="rank" type="text"></input>
       <label>Fund Type</label><input onChange={(e)=>handle(e)} id="fundType" value={data.fundType} placeholder="Open/Close" type="text"></input>
      
-      <label>Manager Id</label><input  onChange={(e)=>handle(e)} id="mgrId" value={data.mgrId} placeholder="Manager Id" type="number"></input>
+      {/* <label>Manager Id</label><input  onChange={(e)=>handle(e)} id="mgrId" value={data.mgrId} placeholder="Manager Id" type="number"></input> */}
       <button>Submit</button>
     </form>
     </div>
