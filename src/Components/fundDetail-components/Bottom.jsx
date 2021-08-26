@@ -12,18 +12,17 @@ function Bottom({ data }) {
         else {
             const body = JSON.stringify({
                 "transactionType": "Sell",
-                "transactionStatus": "Complete",
                 "amount": amount,
                 "fundId": data.fundId
             })
-            api.post('/cart/addItem', body, { "headers": { "content-type": "application/json", "Authorization" : `Bearer ${localStorage.getItem("token")}` } }).then((res) => {
-                  if(res && res.data){
-                      alert("Successfully Added")
-                  }
+            api.post('/cart/addItem', body, { "headers": { "content-type": "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}` } }).then((res) => {
+                if (res && res.data) {
+                    alert("Successfully Added")
+                }
             }).catch(function (error) { alert(error) })
         }
     }
-    const [amount, setAmount] = useState();
+    const [amount, setAmount] = useState('');
     return (
         <>
             <p>Fund Name: {data.fundName}</p>

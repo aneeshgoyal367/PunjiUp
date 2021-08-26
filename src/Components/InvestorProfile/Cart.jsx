@@ -3,7 +3,7 @@ import CartShow from './CartShow';
 import axios from 'axios'
 function Cart({ id }) {
     const api = axios.create({
-        baseURL: `https://punjiup.herokuapp.com/api/investor/buycart`
+        baseURL: `https://punjiup.herokuapp.com/api/investor/cart`
     })
     const body = JSON.stringify({
         // "customerId":id
@@ -11,7 +11,7 @@ function Cart({ id }) {
     })
     const [cartdata, setcartData] = useState([]);
     useEffect(() => {
-        api.post('', body, { "headers": { "content-type": "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}` } }).then(res => {
+        api.get('', { "headers": { "content-type": "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}` } }).then(res => {
             let temp = [];
             temp = res.data;
             setcartData(temp)

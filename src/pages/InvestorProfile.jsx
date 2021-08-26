@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { useLocation } from "react-router-dom";
 import Header from '../Components/Header'
 import Middle from '../Components/InvestorProfile/Middle'
 // import axios from 'axios'
@@ -32,7 +32,7 @@ function InvestorProfile() {
 
       {localStorage.getItem("token") ? <div>
         <Header signup={false} signin={false} home={false} contact={false} about={false} signout={true} search={true} />
-        <Middle id={location.state.id} ></Middle>
+        <Middle id={location.state.id} name={location.state.name}></Middle>
       </div> : history.push('/InvSignin')}
 
     </div>

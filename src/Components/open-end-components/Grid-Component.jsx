@@ -16,12 +16,16 @@ function returnTableRow(trow) {
                 <td key={i}><Link to={`/fund-detail/${trow.fundId}`} >{trow[objKey]}</Link></td>
             )
         }
-        else if (objKey == "symbol" || objKey == "totalValue") {
+        else if (objKey === "totalValue") {
             return <td key={i}>{trow[objKey]}</td>
         }
-        else if (objKey == "fundManager") {
+        else if (objKey === "fundManager") {
             return <td key={i}>{trow[objKey].firstName}</td>
         }
+        else if (objKey === "symbol" ) {
+            return <td key={i}>{trow[objKey]}</td>
+        }
+        
         // else if(objKey=="Button"){
         //     return <td key={i}>Add to cart</td>
         // }

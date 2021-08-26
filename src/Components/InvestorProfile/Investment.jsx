@@ -6,7 +6,7 @@ function Investment (props){
         // props.show.map((e) => {
         //     return <Show key={e.cust_id + i++} show={e}/>
         // })
-        <>sajvhavahsdfajshvashjvasjh</>
+        <>This is investment of user</>
     );
 }
 export default Investment;
