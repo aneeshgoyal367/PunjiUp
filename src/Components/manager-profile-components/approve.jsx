@@ -7,14 +7,31 @@ const api = axios.create({
 })
 
 function Approve() {
+  let headerObj = {"content-type": "application/json"};
+ 
+  headerObj.Authorization = `Bearer ${localStorage.getItem("token")}`
+
   const [approvedata, setapprovedata] = useState([])
   let temp = [];
   useEffect(() => {
-    api.get('/fund/transactions').then(res => {
+    api.get('/fund/transactions',  { "headers": headerObj }).then(res => {
       temp = res.data;
       setapprovedata(temp);
     })
   }, [])
+  function handleApprove(e){
+    e.preventDefault();
+    let tid = e.currentTarget.getAttribute("data-tid");
+    let reqObj={
+      "transactionId":tid,
+       "transactionStatus":"Approved"
+  }	
+    api.put('/fund/updatetransaction',{"headers" :headerObj }).then(res => {
+     alert("Approved Successfully")
+    })
+  }
+  
+  // https://punjiup.herokuapp.com/api/fundmanager/fund/updatetransaction
 
   return (
     <div>
@@ -22,8 +39,12 @@ function Approve() {
         <thead className="thead-dark">
           <tr>
           <th scope="col">S.no</th>
-            <th scope="col">Transaction Id</th>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Customer Email Id</th>
+          <th scope="col">Fund Name</th>
+          <th scope="col">Total Value</th>
             <th scope="col">Transaction Status</th>
+            <th scope="col">Action</th>
             
           </tr>
         </thead>
@@ -32,10 +53,15 @@ function Approve() {
             return (
             <tr key={item.id}>
               <th scope="row">{index + 1}</th>
-              <td>{item.transactionId}</td>
+              <td>{item.customer.firstName} {item.customer.lastName}</td>
+              <td>{item.customer.email}</td>
+              <td>{item.fundDetails.fundName}</td>
+              <td>{item.fundDetails.fundManager.totalValue}</td>
               <td>{item.transactionStatus}</td>
+              <td><a href="#" data-tid = {item.transactionId} onClick={this.handleApprove}>Approve</a></td>
             </tr>)
           }) : ""}
+          
 
         </tbody>
       </table>
