@@ -24,7 +24,10 @@ function Right() {
                         state: { id: res.data.user.id, }
                     });
                 }
-            }).catch(function (error) { alert(error) })
+            }).catch(function (error) { 
+                alert("Invalid Username and Password") 
+                console.log(error) 
+            });
         }
     }
     return (

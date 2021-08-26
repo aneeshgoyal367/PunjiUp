@@ -18,7 +18,7 @@ function Header(props) {
 
     function removeuser() {
         localStorage.removeItem('token')
-        history.push('/InvSignin')
+        history.push('/Home')
     }
     const searching1 = (data) => {
         setInfo(data.target.value);
