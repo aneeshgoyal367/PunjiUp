@@ -32,7 +32,7 @@ function InvestorProfile() {
 
       {localStorage.getItem("token") ? <div>
         <Header signup={false} signin={false} home={false} contact={false} about={false} signout={true} search={true} />
-        <Middle id={location.state.id} name={location.state.name}></Middle>
+        <Middle id={location.state.id} name={location.state.name} role={location.state.role}></Middle>
       </div> : history.push('/InvSignin')}
 
     </div>

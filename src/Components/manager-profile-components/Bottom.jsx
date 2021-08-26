@@ -16,10 +16,12 @@ import CBottom from '../closed-end-components/Bottom'
 import OBottom from '../open-end-components/Bottom'
 
 
-function Bottom() {
+function Bottom(props) {
+    console.log(props)
     return (
         <div>
             {/* <h2>Topics</h2> */}
+            <h3>Hi, {props.firstName}</h3>
             <Router>
                 <ul className="border1">
                     {/* <li><Link to='/all'>All Funds List</Link></li> */}
@@ -50,8 +52,10 @@ function Bottom() {
                         {/* <Route path='/allfund' component={allfund} /> */}
                         {/* <Route path='/all' component={all} /> */}
                         {/* <Route path='/addfund' component={addfund} /> */}
-                        <Route path='/investor/openEnd' component={CBottom} />
-                        <Route path='/investor/closeEnd' component={OBottom} />
+                        <Route path='/investor/closeEnd' render={() => (<CBottom role={props.role} />)}/>
+                        <Route path='/investor/openEnd' render={() => (<OBottom role={props.role} />)}/>
+                        {/* <Route path='/investor/closeEnd' component={CBottom} /> */}
+                        {/* <Route path='/investor/openEnd' component={OBottom} /> */}
                         <Route path='/addjson' component={addjson} />
                         <Route path='/approve' component={approve} />
                        

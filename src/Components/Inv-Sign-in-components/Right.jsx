@@ -21,7 +21,7 @@ function Right() {
                     localStorage.setItem("token", accessToken[1])
                     history.push({
                         pathname: '/investor',
-                        state: { id: res.data.user.id, name:res.data.user.firstName }
+                        state: { id: res.data.user.id, name:res.data.user.firstName, role:res.data.user.role }
                     });
                 }
             }).catch(function (error) { 
