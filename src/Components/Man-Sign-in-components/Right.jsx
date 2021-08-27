@@ -54,7 +54,7 @@ function Right() {
                             name="email"
                             id="email-id"
                             value={email}
-                            placeholder="Manager's Eamil id"
+                            placeholder="Manager's Email id"
                             autoComplete="off"
                             onChange={(e) => setemail(e.target.value)}>
                         </input>

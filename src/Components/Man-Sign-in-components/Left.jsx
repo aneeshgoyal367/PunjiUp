@@ -1,7 +1,7 @@
 import React from 'react'
 function Left(){
     return (
-        <div id="left">
+        <div>
              <img id="left-img" src="assets/photos/manager-sign-in-image.jpg" alt="image"></img>
         </div>
     );
