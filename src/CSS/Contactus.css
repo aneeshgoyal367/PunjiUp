@@ -6,6 +6,13 @@ body {
   * {
     box-sizing: border-box;
   }
+  .center44{
+   
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
 
   input[type=text],
   select,

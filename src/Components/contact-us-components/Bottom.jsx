@@ -5,7 +5,7 @@ function Bottom() {
   }
     return (
         <div>
-            <h3><center>Contact Us</center></h3>
+            <h3 className="center44">Contact Us</h3>
         
 
 <div className="container">
@@ -28,7 +28,7 @@ function Bottom() {
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style={{height:'200px'}}/>
     {/* <input type="submit" value="Submit" /> */}
-    <button onClick={sayHello}>Submit</button>
+    <button  onClick={sayHello}>Submit</button>
   </form>
 </div>
         </div>
